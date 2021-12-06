@@ -1,0 +1,23 @@
+{
+  "name": "grupo_8_le_maison",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">LeMaison</h1>",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilvaLucas92/grupo_8_le_maison.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SilvaLucas92/grupo_8_le_maison/issues"
+  },
+  "homepage": "https://github.com/SilvaLucas92/grupo_8_le_maison#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
