@@ -13,10 +13,10 @@
 https://marvelapp.com/project/5970326#
 
 <ul>
-  <li>[login.pdf](https://github.com/SilvaLucas92/grupo_8_le_maison/files/7692674/login.pdf)</li>
-  <li>[descripcion-producto.pdf](https://github.com/SilvaLucas92/grupo_8_le_maison/files/7692675/descripcion-producto.pdf)</li>
-  <li>[carrito-compras.pdf](https://github.com/SilvaLucas92/grupo_8_le_maison/files/7692677/carrito-compras.pdf)</li>
-  <li>[home.pdf](https://github.com/SilvaLucas92/grupo_8_le_maison/files/7692678/home.pdf)</li>
+  <li>login(https://github.com/SilvaLucas92/grupo_8_le_maison/files/7692674/login.pdf)</li>
+  <li>descripcion-producto(https://github.com/SilvaLucas92/grupo_8_le_maison/files/7692675/descripcion-producto.pdf)</li>
+  <li>carrito-compras(https://github.com/SilvaLucas92/grupo_8_le_maison/files/7692677/carrito-compras.pdf)</li>
+  <li>home(https://github.com/SilvaLucas92/grupo_8_le_maison/files/7692678/home.pdf)</li>
 </ul> 
 
 </p>
