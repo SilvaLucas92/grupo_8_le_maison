@@ -10,10 +10,16 @@
   <b>Nicolas Juarez</b>: Tengo 25 años, trabajo en una empresa que ofrece Hardware y Software para locales gastronomicos. Mis hobbies estan relacionados con hacer deportes y actividades en grupo.<br>
   <b>Dirlyz Ruiz</b>: chica de 25 años, estudiante de desarrollo web con nociones basicas de HTML, CSS y JavaScript con muchas ganas de aprender cosas nuevas.<br>
   <b>WireFrame</b>:<br>
-https://marvelapp.com/project/5970326
+https://marvelapp.com/project/5970326#
+
+<ul>
+  <li>login(https://github.com/SilvaLucas92/grupo_8_le_maison/files/7692674/login.pdf)</li>
+  <li>descripcion-producto(https://github.com/SilvaLucas92/grupo_8_le_maison/files/7692675/descripcion-producto.pdf)</li>
+  <li>carrito-compras(https://github.com/SilvaLucas92/grupo_8_le_maison/files/7692677/carrito-compras.pdf)</li>
+  <li>home(https://github.com/SilvaLucas92/grupo_8_le_maison/files/7692678/home.pdf)</li>
+</ul> 
 
 </p>
-
 
 <ul>
   <li>https://www.morph.com.ar</li>
@@ -22,4 +28,5 @@ https://marvelapp.com/project/5970326
   <li>https://es.aliexpress.com/</li>
   <li>https://elmundodelmueble.com/</li>
   
-</ul>  
+</ul> 
+
