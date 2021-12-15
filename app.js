@@ -11,3 +11,8 @@ app.get('/', (req, res) =>{
     let htmlPath = path.resolve (__dirname, 'views/home.html');
     res.sendFile(htmlPath);
 })
+
+app.get('/productCart', (req, res) =>{
+    let htmlPath1 = path.resolve (__dirname, 'views/productCart.html');
+    res.sendFile(htmlPath1);
+})
