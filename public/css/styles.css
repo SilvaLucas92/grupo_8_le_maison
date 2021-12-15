@@ -534,13 +534,18 @@ body{
 
     .footer-container {
         width: 75%;
-
     }
 
     .list-foot {
         display: flex;
         flex-direction: row;
         padding: 5px;
+    }
+
+    /*login*/
+
+    .container-login {
+        max-width: 650px;
     }
     
     /*CARRITO DE COMPRAST*/
@@ -553,6 +558,12 @@ body{
         position: relative;
         bottom: 16px
     }
+    /*register*/
+
+    .container-register {
+        max-width: 650px;
+    }
+
 
 }
 
@@ -633,8 +644,213 @@ body{
             font-size: 18px;
         }
 
+            /*register*/
 
-
-
+        .container-register {
+            max-width: 750px;
+        }
 }
+
+
+/*Login Styles*/
+
+.section-login {
+    width: 90%;
+    height: 60vh;
+    margin: auto;
+}
+
+.container-login {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 5px;
+    background-color: #ffab40;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.container-login:hover {
+    box-shadow: 0px -11px 13px 1px rgba(143, 143, 143, 0.46);
+}
+
+.container-login h4 {
+    width: 70%;
+    text-align: left;
+    font-weight: 700;
+    color: #000000;
+    font-size: 22px;
+}
+
+.inicie-class {
+    text-decoration: none;
+}
+
+.inicie-class:hover {
+    border-bottom: solid 2px #000000;
+}
+
+.container-login p {
+    text-align: center;
+    color: #616161;
+    font-size: 15px;
+}
+
+.container-login a {
+    text-align: center;
+    color: #000000;
+}
+
+.div-input {
+    width: 100%;
+}
+
+.div-input i {
+    color: #616161;
+    font-size: 15px;
+    width: 70%;
+    text-align: end;
+    margin: auto;
+    display: block;
+    position: relative;
+    bottom: 30px;
+    right: 10px;
+}
+
+.div-input input {
+    width: 70%;
+    height: 40px;
+    margin: auto;
+    border: solid 2px blue;
+    display: block;
+    padding: 5px;
+    margin-top: 10px;
+    border-width: 0px;
+}
+
+.div-checkbox {
+    width: 70%;
+    text-align: left;
+    padding: 10px 10px 10px 0;
+}
+
+.button-class {
+    width: 35%;
+    height: 35px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #000000;
+    border-width: 0px;
+    color: #ffffff;
+}
+
+
+.button-class:hover {
+    background-color: #ffffff;
+    color: #ffab40;
+}
+
+/*Register Styles*/
+
+.section-register {
+    width: 100%;
+    height: 85vh;
+    margin: auto;
+}
+
+.container-register {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 5px;
+    background-color: #ffab40;
+    border-radius: 10px;    
+    box-shadow: none;
+}
+
+.container-register:hover {
+    box-shadow: 0px -11px 13px 1px rgba(143, 143, 143, 0.46);
+}
+
+.container-register h4 {
+    width: 80%;
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 25px;
+}
+
+
+
+.div-input-register {
+    width: 100%;
+}
+
+.div-input-register i {
+    color: #616161;
+    font-size: 15px;
+    width: 70%;
+    text-align: end;
+    margin: auto;
+    display: block;
+    position: relative;
+    bottom: 29px;
+    left: 10px;
+}
+
+.div-input-register input {
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    display: block;
+    padding: 5px;
+    margin-top: 20px;
+    border-width: 0px;
+}
+
+.div-checkbox-register {
+    display: flex;
+    padding:  10px 10px 10px 0;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.div-checkbox-register label {
+    font-size: 14px;
+    color: #616161;
+}
+
+.div-checkbox-register input {
+    margin-right: 5px;
+}
+
+.button-class-register {
+    width: 40%;
+    height: 45px;
+    padding: 5px;
+    margin: 20px 0 10px 0;
+    background-color: #000000;
+    border-width: 0px;
+    color: #ffffff;
+}
+
+
+.button-class-register:hover {
+    background-color: #ffffff;
+    color: #ffab40;
+}
+
+
+
+
+
 
