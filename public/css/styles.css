@@ -685,13 +685,10 @@ body{
 }
 
 .inicie-class {
-    text-decoration: none;
     font-size: 20px;
 }
 
-.inicie-class:hover {
-    border-bottom: solid 2px #000000;
-}
+
 
 .container-login p {
     text-align: center;
