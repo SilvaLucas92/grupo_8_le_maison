@@ -432,8 +432,7 @@ body{
     }
 
     .div-logo img {
-        max-height: 300px;
-        max-width: 42%;
+        max-width: 300px;
         position: relative;
         right: 150px;
         top: 15px;
@@ -574,7 +573,7 @@ body{
         }
     
         .div-logo img {
-            max-width: 45%;
+            max-width: 500px;
         }
 
         .div-logo ul {
@@ -656,12 +655,10 @@ body{
 
 .section-login {
     width: 90%;
-    height: 60vh;
     margin: auto;
 }
 
 .container-login {
-    height: 100%;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -689,6 +686,7 @@ body{
 
 .inicie-class {
     text-decoration: none;
+    font-size: 20px;
 }
 
 .inicie-class:hover {
@@ -759,12 +757,10 @@ body{
 
 .section-register {
     width: 100%;
-    height: 85vh;
     margin: auto;
 }
 
 .container-register {
-    height: 100%;
     width: 90%;
     display: flex;
     flex-direction: column;
