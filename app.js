@@ -7,7 +7,7 @@ app.listen(8000,() =>
     console.log('Servidor corriendo en el puerto 8000'));
 
 //archivos public
-app.use(express.static(path.resolve(__dirname, "public")));
+app.use(express.static("public"));
 
 //EJS
 app.set("view engine", "ejs");
@@ -16,8 +16,11 @@ app.set("view engine", "ejs");
 const mainRoutes = require("./routes/mainRoute.js");
 app.use("/", mainRoutes);
 
+const userRoutes = require("./routes/userRoutes.js");
+app.use("/user", userRoutes);
 
-
+const productRoutes = require("./routes/productRoutes.js");
+app.use("/product", productRoutes);
 
 
 
