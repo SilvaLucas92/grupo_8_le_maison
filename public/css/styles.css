@@ -142,6 +142,7 @@ body{
     -5px -5px 10px #b4b4b4;
 }
 
+
 /*section-2*/
 
 .main-section2 {
@@ -194,6 +195,8 @@ body{
     margin-top: 3px;
     color: #424242;
 }
+
+
 
 
 /*form*/
@@ -334,241 +337,6 @@ body{
 }
 
 
-@media (min-width:768px) {
-    /*header*/
-
-    .header-container {
-        max-width: 75%;
-    }
-
-    .div-logo {
-        max-width: 70%;
-        justify-content: center;
-    }
-
-    .div-logo img {
-        max-width: 300px;
-        position: relative;
-        right: 150px;
-        top: 15px;
-    }  
-
-    
-    .div-logo ul {
-        width: 25%;
-        position: relative;
-        left: 200px;
-        top: 15px;
-    }
-
-    .div-logo ul li {
-        font-size: 18px;
-    }
-
-    .icon-bar {
-        display: none;
-    }
-
-    .header-nav {
-        display: block;
-        text-align: center;
-
-    }
-
-    .header-nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0px;
-    }
-
-    .header-nav li {
-        padding: 10px;
-        font-size: 18px;
-    }   
-
-    .header-nav li:hover {
-        border-bottom: solid 2px #000000;
-    }   
-    
-        /*main section 1*/
-
-        .main-section1 {
-            width: 60%;
-        }
-        .div-art {
-            display: flex;
-            align-items: center;
-        }
-    
-        .section1-art1 { 
-            width: 66.67%;
-    
-        }
-    
-    
-        .section1-art1 img { 
-            position: relative;
-            right: 5px;
-        }
-    
-        .section1-art2 { 
-            width: 33.33%;
-        }
-        
-    
-    
-        /*main section 2*/
-    
-        .main-section2 {
-            width: 75%;
-        }
-    
-    
-        .div-art2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-    
-        .section2-art {
-            width: 35%;
-            margin: 10px;
-        }
-    
-        .form-newsletter input {
-            max-width: 60%;
-        }
-        
-        .form-newsletter button {
-            max-width: 60%;
-        }
-    
-    
-        /*footer*/
-    
-        .footer-container {
-            width: 75%;
-        }
-    
-        .list-foot {
-            display: flex;
-            flex-direction: row;
-            padding: 5px;
-        }
-    
-        /*login*/
-    
-        .container-login {
-            max-width: 650px;
-        }
-        
-
-        /*register*/
-    
-        .container-register {
-            max-width: 650px;
-        }
-
-        /*CARRITO DE COMPRAS*/
-
-        .carrito-guardados {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 25px;
-            position: relative;
-            bottom: 16px
-    }
-    
-    }
-
-@media (min-width:1200px) {
-       
-        /*header*/
-        
-        .header-container {
-            max-width: 70%;
-        }
-    
-        .div-logo img {
-            max-width: 500px;
-        }
-
-        .div-logo ul {
-            width: 20%;
-        }
-
-        /*main section 1*/
-
-        .main-section1 {
-            width: 55%;
-        }
-
-        .main-section1 h2 {
-            font-size: 30px;
-        }
-
-        .main-section1 p {
-            font-size: 18px;
-        }
-
-        /*main section 2*/
-
-        .main-section2 {
-            width: 70%;
-        }
-
-        .main-section2 h3 {
-            font-size: 20px;
-        }
-
-        .div-art2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-    
-        .section2-art {
-            width: 25%;
-            margin: 20px;
-        }
-
-
-        .form-newsletter input {
-            max-width: 50%;
-        }
-        
-        .form-newsletter button {
-            max-width: 50%;
-        }
-
-        /*footer*/
-        
-        .footer-container {
-            width: 70%;
-
-        }
-
-        .list-foot2 h3 {
-            font-size: 20px;
-        }
-
-        .list-foot2 a {
-            font-size: 18px;
-        }
-        
-        .list-foot2 span {
-            font-size: 18px;
-        }
-
-            /*register*/
-
-        .container-register {
-            max-width: 750px;
-        }
-}
 
 
 /*Login Styles*/
@@ -947,4 +715,240 @@ font-size: 30px;
 .descriptionText {
 margin: auto;
 padding: 20px;
+}
+
+@media (min-width:768px) {
+    /*header*/
+
+    .header-container {
+        max-width: 75%;
+    }
+
+    .div-logo {
+        max-width: 70%;
+        justify-content: center;
+    }
+
+    .div-logo img {
+        max-width: 300px;
+        position: relative;
+        right: 150px;
+        top: 15px;
+    }  
+
+    
+    .div-logo ul {
+        width: 25%;
+        position: relative;
+        left: 200px;
+        top: 15px;
+    }
+
+    .div-logo ul li {
+        font-size: 18px;
+    }
+
+    .icon-bar {
+        display: none;
+    }
+
+    .header-nav {
+        display: block;
+        text-align: center;
+
+    }
+
+    .header-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    .header-nav li {
+        padding: 10px;
+        font-size: 18px;
+    }   
+
+    .header-nav li:hover {
+        border-bottom: solid 2px #000000;
+    }   
+    
+        /*main section 1*/
+
+        .main-section1 {
+            width: 60%;
+        }
+        .div-art {
+            display: flex;
+            align-items: center;
+        }
+    
+        .section1-art1 { 
+            width: 66.67%;
+    
+        }
+    
+    
+        .section1-art1 img { 
+            position: relative;
+            right: 5px;
+        }
+    
+        .section1-art2 { 
+            width: 33.33%;
+        }
+        
+    
+    
+        /*main section 2*/
+    
+        .main-section2 {
+            width: 75%;
+        }
+    
+    
+        .div-art2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    
+        .section2-art {
+            width: 35%;
+            margin: 10px;
+        }
+    
+        .form-newsletter input {
+            max-width: 60%;
+        }
+        
+        .form-newsletter button {
+            max-width: 60%;
+        }
+    
+    
+        /*footer*/
+    
+        .footer-container {
+            width: 75%;
+        }
+    
+        .list-foot {
+            display: flex;
+            flex-direction: row;
+            padding: 5px;
+        }
+    
+        /*login*/
+    
+        .container-login {
+            max-width: 650px;
+        }
+        
+
+        /*register*/
+    
+        .container-register {
+            max-width: 650px;
+        }
+
+        /*CARRITO DE COMPRAS*/
+
+        .carrito-guardados {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 25px;
+            position: relative;
+            bottom: 16px
+    }
+    
+    }
+
+@media (min-width:1200px) {
+       
+        /*header*/
+        
+        .header-container {
+            max-width: 70%;
+        }
+    
+        .div-logo img {
+            max-width: 500px;
+        }
+
+        .div-logo ul {
+            width: 20%;
+        }
+
+        /*main section 1*/
+
+        .main-section1 {
+            width: 55%;
+        }
+
+        .main-section1 h2 {
+            font-size: 30px;
+        }
+
+        .main-section1 p {
+            font-size: 18px;
+        }
+
+        /*main section 2*/
+
+        .main-section2 {
+            width: 70%;
+        }
+
+        .main-section2 h3 {
+            font-size: 20px;
+        }
+
+        .div-art2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    
+        .section2-art {
+            width: 25%;
+            margin: 20px;
+        }
+
+
+        .form-newsletter input {
+            max-width: 50%;
+        }
+        
+        .form-newsletter button {
+            max-width: 50%;
+        }
+
+        /*footer*/
+        
+        .footer-container {
+            width: 70%;
+
+        }
+
+        .list-foot2 h3 {
+            font-size: 20px;
+        }
+
+        .list-foot2 a {
+            font-size: 18px;
+        }
+        
+        .list-foot2 span {
+            font-size: 18px;
+        }
+
+            /*register*/
+
+        .container-register {
+            max-width: 750px;
+        }
 }

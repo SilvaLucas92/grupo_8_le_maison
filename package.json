@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/SilvaLucas92/grupo_8_le_maison#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }

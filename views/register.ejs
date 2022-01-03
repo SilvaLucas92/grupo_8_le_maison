@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -18,39 +18,44 @@
                 <div class = "icon-bar">
                     <i class="fas fa-bars"></i>
                 </div>
-                <img src="images/LeMaison.png" alt="logo">
+                <img src="/images/LeMaison.png" alt="logo">
                 <ul>
                     <li><a href="#"><i class="fas fa-search"></i></a></li>
-                    <li><a href="/login"><i class="far fa-user"></i></a></li>
-                    <li><a href="/productCart"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="/user/login"><i class="far fa-user"></i></a></li>
+                    <li><a href="/product/productCart"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
             </div>
             <nav class="header-nav">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/productDetail">Productos</a></li>
+                    <li><a href="/product/productDetail">Productos</a></li>
                     <li><a href="#">Preguntas Frecuentes</a></li>
                 </ul>
             </nav>
         </div>
     </header>   
     <main>
-        <section class="section-login">
-            <form action="" method="get" class="container-login">
-                    <h4>Si ya se encuentra registrado, inicie sesion.</h4>
-                    <div class="div-input">
-                    <input type="text" name="usuario" id="nombre-usuario" placeholder="Ingrese correo electronico o usuario">
-                    <input type="password" value="contra" placeholder="password">
+        <section class="section-register">
+            <form action="" method="get" class="container-register">
+                    <h4>Registrate</h4>
+                    <div class="div-input-register">
+                    <input type="text" name="usuario" id="nombre-usuario" placeholder="Nombre">
+                    <input type="text" name="usuario" id="nombre-usuario" placeholder="Apellido">
+                    <input type="email" placeholder="E-mail">
+                    <input type="password" value="contra" placeholder="Password">
+                    <i class="fas fa-eye-slash"></i>
+                    <input type="password" value="contra" placeholder="Repetir Password">
                     <i class="fas fa-eye-slash"></i>
                     </div>
-                    <div class="div-checkbox">
+                    <div class="div-checkbox-register">
                     <input type="checkbox">
-                    <label>Recordarme</label>
+                    <label>Al marcar esta casilla indico que he leido y estoy de acuerdo con los terminos y condiciones y la politica de privacidad de LeMaison</label>
                     </div>
-                    <button type="submit" class="button-class">Enviar</button>
-                    <a href="#">¿Olvido su contraseña?</a>
-                    <p>Si aun no posee una cuenta, puedes crearla <a href="/register" class="inicie-class"> aqui </a> </p>
-                    <button type="submit" class="button-class">Registrarse</button>  
+                    <div class="div-checkbox-register">
+                    <input type="checkbox">
+                    <label>Deseo recibir informacion comercial de LeMaison</label>
+                    </div>
+                    <button type="submit" class="button-class-register">Crear Usuario</button>
             </form>
         </section>
 
@@ -63,7 +68,7 @@
                     <ul class="list-foot2">
                         <h3>Navegacion</h3>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/producDetail">Productos</a></li>
+                        <li><a href="/product/productDetail">Productos</a></li>
                         <li><a href="#">Preguntas Frecuentes</a></li>
                     </ul>
                 </li>
