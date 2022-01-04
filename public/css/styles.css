@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+  
 }
 
 body{
@@ -765,7 +766,7 @@ body{
     text-align: center;
     color: #000000;
     padding-left: 30px;
-    font-size: 50px;
+    font-size: 30px;
 
     
  }
@@ -788,19 +789,16 @@ body{
  }
 
 
-.art-productDetail1 {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    background-color: #cac2c2;
-    border-radius:10px ;
-   display: flex;
+
    
     /* faltaron trancisiones acá*/
-}
+
 
 .art-productDetail1 img {
-    width: 50%;
-    border-radius: 10px 10px 0 0;
+
+    display:block;
+    margin:auto;
+    width: 350px;
    
     
     
@@ -808,11 +806,11 @@ body{
 
 
 .descriptionText span {
-color: #a30a0a;
-   text-align: left;
+color: #ffab40;
+   text-align: center;
    padding: 20px;
-   margin: auto;
-   font-size: 20px;
+  font-size: 25px;
+   display: block;
    
 }
 
@@ -820,8 +818,9 @@ color: #a30a0a;
     text-align: center;
     margin-top: 3px;
     color: #130f0f;
-    padding: 10%;
+  
     font-size: 30px;
+    
     
 }
 
@@ -830,20 +829,18 @@ color: #a30a0a;
     margin-top: 3px;
     color: #130f0f;
     font-size: 20px;
-    padding: 20px ;
-    line-height: 50px;
+ 
+    line-height: 20px;
     
     
 }
 
 .descriptionText i {
-background-color: #d19898;
-border-radius: 5px;
-margin: 60px;
-padding: 15px; 
+
 text-align: center;
 display: block;
 font-size: 30px;
+
   
 }
 
@@ -851,6 +848,7 @@ font-size: 30px;
 
 .main-Product-Detail {
     width: 75%;
+    margin: auto;
 }
 .art-productDetail1 {
     margin: auto;
