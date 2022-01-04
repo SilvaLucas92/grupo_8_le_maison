@@ -13,13 +13,13 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 //routes
-const mainRoutes = require("./routes/mainRoute.js");
+const mainRoutes = require("./routes/mainRoutes");
 app.use("/", mainRoutes);
 
-const userRoutes = require("./routes/userRoutes.js");
+const userRoutes = require("./routes/userRoutes");
 app.use("/user", userRoutes);
 
-const productRoutes = require("./routes/productRoutes.js");
+const productRoutes = require("./routes/productRoutes");
 app.use("/product", productRoutes);
 
 
