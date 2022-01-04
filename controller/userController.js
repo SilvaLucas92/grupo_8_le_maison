@@ -1,10 +1,11 @@
+
 const controlador = {
     login: (req, res)=>{
-        res.render("login");
+        res.render("../views/users/login");
     },
     register: (req, res)=>{
-        res.render("register")
-    },
+        res.render("../views/users/register")
+    }
 };
 
 module.exports = controlador;

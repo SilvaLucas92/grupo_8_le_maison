@@ -529,6 +529,148 @@ body{
     color: #ffab40;
 } 
 
+/***** NEW PRODUCT ******/
+
+.section-create {
+    width: 100%;
+    margin: auto;
+}
+
+.container-create {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 5px;
+    background-color: #ffab40;
+    border-radius: 10px;    
+    box-shadow: none;
+}
+
+.container-create:hover {
+    box-shadow: 0px -11px 13px 1px rgba(143, 143, 143, 0.46);
+}
+
+.container-create h4 {
+    width: 80%;
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 25px;
+}
+
+.div-input-create {
+    width: 100%;
+}
+
+.div-input-create input {
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    display: block;
+    padding: 5px;
+    margin-top: 20px;
+    border-width: 0px;
+}
+
+.button-class-create {
+    width: 40%;
+    height: 45px;
+    padding: 5px;
+    margin: 20px 0 20px 0;
+    background-color: #000000;
+    border-width: 0px;
+    color: #ffffff;
+}
+
+.button-class-create:hover {
+    background-color: #ffffff;
+    color: #ffab40;
+} 
+
+.div-input-create select {
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    display: block;
+    padding: 5px;
+    margin-top: 20px;
+    border-width: 0px;
+}
+
+/****modProduct******/
+
+.section-mod {
+    width: 100%;
+    margin: auto;
+}
+
+.container-mod {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 5px;
+    background-color: #ffab40;
+    border-radius: 10px;    
+    box-shadow: none;
+}
+
+.container-mod:hover {
+    box-shadow: 0px -11px 13px 1px rgba(143, 143, 143, 0.46);
+}
+
+.container-mod h4 {
+    width: 80%;
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 25px;
+}
+
+.div-input-mod {
+    width: 100%;
+}
+
+.div-input-mod input {
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    display: block;
+    padding: 5px;
+    margin-top: 20px;
+    border-width: 0px;
+}
+
+.button-class-mod {
+    width: 40%;
+    height: 45px;
+    padding: 5px;
+    margin: 20px 0 20px 0;
+    background-color: #000000;
+    border-width: 0px;
+    color: #ffffff;
+}
+
+.button-class-mod:hover {
+    background-color: #ffffff;
+    color: #ffab40;
+} 
+
+.div-input-mod select {
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    display: block;
+    padding: 5px;
+    margin-top: 20px;
+    border-width: 0px;
+}
+
 
 /*CARRITO DE COMPRAS*/
 .div-logo-carrito {
@@ -866,6 +1008,17 @@ padding: 20px;
             position: relative;
             bottom: 16px
     }
+
+        /*****newProduct******/
+
+        .container-create {
+            max-width: 680px;
+        }
+
+        /*****modProduct****/
+        .container-mod {
+            max-width: 680px;
+        }    
     
     }
 
@@ -953,4 +1106,15 @@ padding: 20px;
         .container-register {
             max-width: 750px;
         }
+        /*****newProduct*****/
+
+        .container-create {
+            max-width: 750px;
+        }
+
+        /*****modProduct****/
+        .container-mod {
+            max-width: 750px;
+        }
+
 }
