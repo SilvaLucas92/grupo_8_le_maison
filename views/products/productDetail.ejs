@@ -4,26 +4,35 @@
 <body>
     <%- include('../partials/header.ejs') %>
 
-<main>
-<section class="main-Product-Detail">
-
-<div class="div-DetailArt1">
-<article class="art-productDetail1">
-<img src="/images/img1-section2.jpg" alt="">
-<div class="descriptionText">
-<h3>Escritorio</h3>
-<span> Precio $8900</span>
-<p> Moderno y práctico escritorio, con estilo vintage, inspirador de comodidad y confort,
-sus medidas son: 
-Altura: 70cm
-Ancho: 50cm
-Profundidad: 40cm.
-Fabricado con madera de cedro.</p>
-<i class="fas fa-shopping-cart"></i>
-</div>
-</article>
-</section>
-</main>
+    <main>
+        <section class="main-container-detail">    
+                <div class="div-container-detail">
+                    <img src="/images/colcha.jpg" alt="">
+                </div>        
+                    <div class="div-content-detail">
+                        <h2> Sillon </h2>
+                        <h3> $4500 </h3>
+                        <p> sillon tal tal tal tal</p>
+                    <label>Cantidad</label>
+                    <select name="" id="">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                    <div class="button-detail">
+                        <a href= #>
+                            <button>Agregar</button>
+                        </a>
+                        <a href=#> 
+                            <button type="submit" class="button-class-mod">Modificar</button>
+                        </a> 
+                        <form method="post" action=#>
+                            <button type="submit" class="button-class-mod">Borrar Producto</button>
+                        </form> 
+                    </div>
+                    </div>           
+        </section>
+    </main>
 <%- include('../partials/footer.ejs') %>
 </body>
 </html>

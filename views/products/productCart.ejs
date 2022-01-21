@@ -3,17 +3,31 @@
     <%- include('../partials/head.ejs') %>
 <body>
     <%- include('../partials/header.ejs') %>
-        <div class="carrito-guardados">
-            <li><a href="#">Carrito</a></li>
-            <li><a href="#">Guardados</a></li>
-        </div>
-        <div class="carrito-vacio">
-            <h4>Tu Carrito está vacío</h2>
-            <h5>¿No sabés qué comprar? ¡Los más lindos muebles te esperan!</h3>
-        </div>
-        <div class="llenar">
-            <li><a href="/">Comienza a llenarlo ahora</a></li>
-        </div>
+    <main>
+        <section class="main-cart-container">
+            <article class="art-cart">
+                <div class="cart-art-img">
+                    <img src="/images/colcha.jpg" alt="">
+                </div>
+                <div class="cart-art">
+                    <h4>Cantidad</h4>
+                <select name="" id="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+                <h4>Precio</h4>
+                <span> $4500 </span>
+                <div class="div-total">
+                    <h4>Total</h4>
+                    <span> $4500 </span>
+                </div>
+                <div class="button-cart">
+                    <button>Pagar</button>
+                </div>
+            </div>
+        </article>
+        </section>
     </main>
     <%- include('../partials/footer.ejs') %>
 </body>
