@@ -10,10 +10,10 @@
                 <form action="" method="get" class="container-create">
                         <h4>Formulario de Creacion de Productos</h4>
                         <div class="div-input-create">
-                            <input type="text" name="nombre del Producto" id="nombre-usuario" placeholder="Nombre del Producto">
-                            <input type="text" name="Descripcion" id="nombre-usuario" placeholder="Descripcion">
-                            <input type="Imagen" placeholder="Inserte una Imagen">
-                                <select placeholder="Categorias">
+                            <input type="text" name="name" id="nombre-usuario" placeholder="Nombre del Producto">
+                            <input type="text" name="description" id="nombre-usuario" placeholder="Descripcion">
+                            <input type="Imagen" placeholder="Inserte una Imagen" name="image">
+                                <select placeholder="Categorias" name="category">
                                     <option value="">Categorias</option>
                                     <option value="">Mesas</option>
                                     <option value="">Escritorios</option>
@@ -21,12 +21,12 @@
                                     <option value="">Camas</option>
                                     <option value="">Otros</option>
                                 </select>
-                            <input type="number" name="Precio" id="nombre-usuario" placeholder="Precio">
+                            <input type="number" name="price" id="nombre-usuario" placeholder="Precio">
                         </div>
                             <button type="submit" class="button-class-create">Crear Producto</button>
                 </form>
             </section>
-    
+                
         </main>        
         <%- include('../partials/footer.ejs') %>
 </body>
