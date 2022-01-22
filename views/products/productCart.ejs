@@ -7,7 +7,7 @@
         <section class="main-cart-container">
             <article class="art-cart">
                 <div class="cart-art-img">
-                    <img src="/images/colcha.jpg" alt="">
+                    <img src="/images/<%= theProduct.image %>" alt="">
                 </div>
                 <div class="cart-art">
                     <h4>Cantidad</h4>
@@ -17,10 +17,10 @@
                     <option value="">3</option>
                 </select>
                 <h4>Precio</h4>
-                <span> $4500 </span>
+                <span> <%= theProduct.price %></span>
                 <div class="div-total">
                     <h4>Total</h4>
-                    <span> $4500 </span>
+                    <span><%= theProduct.price %></span>
                 </div>
                 <div class="button-cart">
                     <button>Pagar</button>

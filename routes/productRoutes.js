@@ -9,6 +9,7 @@ router.get("/", controller.browse);
 
 //product cart
 router.get("/cart", controller.cart);
+router.get('/cart/:id', controller.addCart);
 
 //newProduct
 router.get('/new', controller.create);
@@ -16,9 +17,8 @@ router.get('/new', controller.create);
 router.post("/", controller.add);
 
 //modProduct
-router.get('/mod', controller.mod);
-//PUT
-router.put("/mod/:id", controller.update);
+router.get('/edit/:id', controller.edit);
+router.put('/:id', controller.update);
 
 //productDetail
 router.get("/:id", controller.detail);
