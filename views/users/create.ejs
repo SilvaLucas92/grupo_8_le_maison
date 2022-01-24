@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs', {pageTitle: 'Create'}) %>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <body>
+
+        <main>
+            <section class="section-create">
+                <form action="" method="get" class="container-create">
+                        <h4>Formulario de Creacion de Usuario</h4>
+                        <div class="div-input-create">
+                            <input type="text" name="firstName" id="firstName" placeholder="Nombre">
+                            <input type="text" name="lastName" id="lastName" placeholder="Apellido">
+                            <input type="text" name="email" id="email" placeholder="Email">
+                            <input type="text" name="password" id="password" placeholder="Contraseña">
+                                <select placeholder="Categoria" name="category">
+                                    <option value="">Categoria</option>
+                                    <option value="">Empresa</option>
+                                    <option value="">Particular</option>
+                                    <option value="">Distribuidor</option>
+                                </select>
+                            <input type="Imagen" placeholder="Inserte una Imagen" name="image">
+                        </div>
+                            <button type="submit" class="button-class-create">Crear Usuario</button>
+                </form>
+            </section>
+
+        </main>        
+        <%- include('../partials/footer.ejs') %>
+</body>
+</html>

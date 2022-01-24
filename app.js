@@ -12,6 +12,10 @@ app.use(express.static("public"));
 //EJS
 app.set("view engine", "ejs");
 
+//req.body
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 //routes
 const mainRoutes = require("./routes/mainRoutes");
 app.use("/", mainRoutes);
