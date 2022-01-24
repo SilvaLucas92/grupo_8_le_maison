@@ -5,14 +5,15 @@
     <%- include('../partials/header.ejs') %>
 
     <main>
-        <section class="main-container-detail">    
+        <section class="main-container-detail">
+    
                 <div class="div-container-detail">
-                    <img src="/images/colcha.jpg" alt="">
+                    <img src="/images/<%= theProduct.image %>" alt="">
                 </div>        
                     <div class="div-content-detail">
-                        <h2> Sillon </h2>
-                        <h3> $4500 </h3>
-                        <p> sillon tal tal tal tal</p>
+                        <h2><%= theProduct.name %> </h2>
+                        <h3><%= theProduct.price %> </h3>
+                        <p><%= theProduct.description %></p>
                     <label>Cantidad</label>
                     <select name="" id="">
                         <option value="">1</option>
@@ -20,17 +21,17 @@
                         <option value="">3</option>
                     </select>
                     <div class="button-detail">
-                        <a href= #>
+                        <a href="/product/cart/<%= theProduct.id %>">
                             <button>Agregar</button>
                         </a>
-                        <a href=#> 
+                        <a href="/product/edit/<%= theProduct.id %>">
                             <button type="submit" class="button-class-mod">Modificar</button>
                         </a> 
-                        <form method="post" action=#>
+                        <form method="post" action="/product/<%= theProduct.id %>?_method=delete">
                             <button type="submit" class="button-class-mod">Borrar Producto</button>
                         </form> 
                     </div>
-                    </div>           
+                    </div>
         </section>
     </main>
 <%- include('../partials/footer.ejs') %>

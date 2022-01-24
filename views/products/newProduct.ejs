@@ -7,13 +7,12 @@
 
         <main>
             <section class="section-create">
-                <form action="/product" method="post" class="container-create">
+                <form action="/product" method="POST" class="container-create">
                         <h4>Formulario de Creacion de Productos</h4>
                         <div class="div-input-create">
-                            <input type="text" name="name" id="nombre-usuario" placeholder="Nombre del Producto">
-                            <input type="text" name="description" id="nombre-usuario" placeholder="Descripcion">
-                            <input type="Imagen" placeholder="Inserte una Imagen" name="image">
-                                <select placeholder="Categorias" name="category">
+                            <input type="text" name="name"  placeholder="Nombre del Producto">
+                            <input type="text" name="description"  placeholder="Descripcion">
+                                <select name='category' placeholder="Categorias">
                                     <option value="">Categorias</option>
                                     <option value="">Mesas</option>
                                     <option value="">Escritorios</option>
@@ -26,9 +25,14 @@
                             <button type="submit" class="button-class-create">Crear Producto</button>
                 </form>
             </section>
+<<<<<<< HEAD
 
         </main>  
 
+=======
+    
+        </main>     
+>>>>>>> ba9f561d68817104aa5784e11b64b614213a7c15
         <%- include('../partials/footer.ejs') %>
 </body>
 </html>

@@ -176,6 +176,10 @@ body{
     border-radius: 10px 10px 0 0;
 }
 
+.section2-art a {
+    text-decoration: none;
+}
+
 .section2-art:hover { 
     transform: scale(1.1); 
     }

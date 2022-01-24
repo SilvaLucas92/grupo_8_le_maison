@@ -3,30 +3,32 @@
     <%- include('../partials/head.ejs', {pageTitle: 'Mod Product'}) %>
 <body>
     <%- include('../partials/header.ejs') %>
-    <body>
-        <main>
-            <section class="section-mod">
-                <form action="" method="get" class="container-mod">
-                        <h4>Formulario de Modificacion de Productos</h4>
-                        <div class="div-input-mod">
-                            <input type="text" name="name" id="nombre-usuario" placeholder="Nombre del Producto">
-                            <input type="text" name="description" id="nombre-usuario" placeholder="Descripcion">
-                            <input type="Imagen" name="image" placeholder="Inserte una Imagen">
-                                <select placeholder="category">
-                                    <option value="">Categorias</option>
-                                    <option value="">Mesas</option>
-                                    <option value="">Escritorios</option>
-                                    <option value="">Sillas</option>
-                                    <option value="">Camas</option>
-                                    <option value="">Otros</option>
-                                </select>
-                            <input type="text" name="price" id="nombre-usuario" placeholder="Precio">
-                        </div>
-                            <button type="submit" class="button-class-mod">Modificar Producto</button>
-                </form>
-            </section>
-    
-        </main>
+    <main>
+        <section class="section-mod">
+            
+            <form action="/product/<%= theProduct.id %>?_method=put" method="post" class="container-mod">
+                    <h4>Estas Modificando el producto <%= theProduct.name %></h4>
+                    <div class="div-input-mod">
+                        <input type="text" name="name" id="nombre-usuario" placeholder="Nombre del Producto">
+                        <input type="text" name="description" id="nombre-usuario" placeholder="Descripcion">
+                            <select name='category' placeholder="Categorias">
+                                <option value="">Categorias</option>
+                                <option value="">Mesas</option>
+                                <option value="">Escritorios</option>
+                                <option value="">Sillas</option>
+                                <option value="">Camas</option>
+                                <option value="">Otros</option>
+                            </select>
+                        <input type="text" name="price" id="nombre-usuario" placeholder="Precio">
+                    </div>
+                        <button type="submit" class="button-class-mod">Modificar Producto</button>
+
+
+            </form>
+            
+        </section>
+
+    </main>
         <%- include('../partials/footer.ejs') %>
 </body>
 </html>

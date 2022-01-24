@@ -1,51 +1,10 @@
-
 [
-    {
-        "id": 1,
-        "image": "img - 1641863529002-982021823-imagen.jpg",
-        "name": "mesa",
-        "price": "45000",
-        "description": "cama",
-        "category": "Mesa"
-    },
-    {
-        "id": 2,
-        "image": "mesa.jpg",
-        "name": "mesa",
-        "price": "45000",
-        "description": "cama",
-        "category": "Mesa"        
-    },
-    {
-        "id": 3,
-        "image": "mesaluz.jpg",
-        "name": "mesa",
-        "price": "45000",
-        "description": "cama",
-        "category": "Mesa"        
-    },
-    {
-        "id": 4,
-        "image": "sillon.jpg",
-        "name": "mesa",
-        "price": "45000",
-        "description": "cama",
-        "category": "Mesa"        
-    },
-    {
-        "id": 5,
-        "image": "sillon1.jpg",
-        "name": "mesa",
-        "price": "45000",
-        "description": "cama",
-        "category": "Mesa"        
-    },
-    {
-        "id": 6,
-        "image": "mueble.jpg",
-        "name": "mesa",
-        "price": "45000",
-        "description": "cama",
-        "category": "Mesa"        
-    }    
-]    
+{
+  "id": 1,
+  "image": "sillon1.jpg",
+  "name": "mesa",
+  "price": "45000",
+  "description": "cama",
+  "category": "Mesa"
+ }
+]

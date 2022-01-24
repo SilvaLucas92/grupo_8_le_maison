@@ -16,6 +16,11 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+//method-override (put, delete)
+
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
 //routes
 const mainRoutes = require("./routes/mainRoutes");
 app.use("/", mainRoutes);
