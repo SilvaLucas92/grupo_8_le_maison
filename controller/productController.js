@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-=======
-const fs = require('fs');
-const path = require('path');
-//products data base path
-const productsPath = path.join(__dirname, '../data/productsDataBase.json');
-//readFIle de la database
-const productsData = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
-
->>>>>>> ba9f561d68817104aa5784e11b64b614213a7c15
 const controlador = {
     browse: (req, res) =>{
         res.render('../views/products/products.ejs', {

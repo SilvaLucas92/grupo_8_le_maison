@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-const controller = {
-    home: (req, res) => {
-        return res.render('home')  } }
-        
-=======
 const fs = require('fs');
 const path = require('path');
 //products data base path
@@ -18,6 +12,5 @@ const controller = {
         });
 }
 }
->>>>>>> ba9f561d68817104aa5784e11b64b614213a7c15
 
 module.exports = controller;
