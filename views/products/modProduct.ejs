@@ -6,7 +6,7 @@
     <main>
         <section class="section-mod">
             
-            <form action="/product/<%= theProduct.id %>?_method=put" method="post" class="container-mod">
+            <form action="/product/<%= theProduct.id %>?_method=put" method="post" class="container-mod" enctype="multipart/form-data">
                     <h4>Estas Modificando el producto <%= theProduct.name %></h4>
                     <div class="div-input-mod">
                         <input type="text" name="name" id="nombre-usuario" placeholder="Nombre del Producto">

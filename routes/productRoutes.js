@@ -18,7 +18,7 @@ router.post("/", fileUpload.single('image'), controller.add);
 
 //modProduct
 router.get('/edit/:id', controller.edit);
-router.put('/:id', controller.update);
+router.put('/:id', fileUpload.single('image'), controller.update);
 
 //productDetail
 router.get("/:id", controller.detail);

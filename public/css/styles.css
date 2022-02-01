@@ -433,6 +433,7 @@ body{
     background-color: #000000;
     border-width: 0px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 
@@ -525,6 +526,7 @@ body{
     background-color: #000000;
     border-width: 0px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 
@@ -616,6 +618,7 @@ body{
     background-color: #000000;
     border-width: 0px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .button-class-create:hover {
@@ -687,6 +690,7 @@ body{
     background-color: #000000;
     border-width: 0px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .button-class-mod:hover {
@@ -776,6 +780,7 @@ body{
     background-color: #000000;
     border-width: 0px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .button-cart button:hover {
@@ -852,6 +857,7 @@ body{
     background-color: #000000;
     border-width: 0px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .div-content-detail button:hover {

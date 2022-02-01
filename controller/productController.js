@@ -71,7 +71,7 @@ const controlador = {
                     name: req.body.name,
                     description: req.body.description,
                     price: req.body.price,
-                    category: req.body.category
+                    category: req.body.category,
                 }
             }
             return oneProduct;
