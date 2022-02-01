@@ -1,10 +1,18 @@
 [
-{
+ {
   "id": 1,
   "image": "sillon1.jpg",
   "name": "mesa",
   "price": "45000",
   "description": "cama",
   "category": "Mesa"
+ },
+ {
+  "id": 2,
+  "name": "Cesto",
+  "price": "28500",
+  "description": "Cesto de mimbre",
+  "category": "",
+  "image": "img - 1643744895965-498484133-image.jpg"
  }
 ]

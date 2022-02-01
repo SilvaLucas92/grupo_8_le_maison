@@ -1,3 +1,9 @@
+const fs = require('fs');
+const path = require('path');
+const productsPath = path.join(__dirname, '../data/productsDataBase.json');
+const productsData = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
+
+
 const controlador = {
     browse: (req, res) =>{
         res.render('../views/products/products.ejs', {
@@ -40,7 +46,8 @@ const controlador = {
             name: req.body.name,
             price: req.body.price,
             description: req.body.description,
-            category: req.body.category
+            category: req.body.category,
+            image: req.file? req.file.filename : null
         })
 
         fs.writeFileSync(productsPath, JSON.stringify(productsData, null, ' '));

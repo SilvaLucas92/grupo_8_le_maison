@@ -565,6 +565,35 @@ body{
     font-size: 25px;
 }
 
+.div-input-file { 
+    margin-bottom: 10px;
+    width: 80%;
+    text-align: left;
+}
+
+.div-input-file input { 
+    display: none;
+}
+
+
+.div-input-file label { 
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 40px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-width: 0px;
+    color: #5a4d4d;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.div-input-file label:hover {
+    background-color: #000000;
+    color: #ffffff;
+} 
+
 .div-input-create {
     width: 100%;
 }

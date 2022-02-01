@@ -7,12 +7,12 @@
 
         <main>
             <section class="section-create">
-                <form action="/product" method="POST" class="container-create">
+                <form action="/product" method="POST" class="container-create" enctype="multipart/form-data">
                         <h4>Formulario de Creacion de Productos</h4>
                         <div class="div-input-create">
                             <input type="text" name="name"  placeholder="Nombre del Producto">
                             <input type="text" name="description"  placeholder="Descripcion">
-                                <select name='category' placeholder="Categorias">
+                                <select name="category" placeholder="Categorias">
                                     <option value="">Categorias</option>
                                     <option value="">Mesas</option>
                                     <option value="">Escritorios</option>
@@ -21,6 +21,10 @@
                                     <option value="">Otros</option>
                                 </select>
                             <input type="number" name="price" id="nombre-usuario" placeholder="Precio">
+                        </div>
+                        <div class="div-input-file">
+                            <label for="input-file"> Ingrese una Imagen </label>
+                            <input  id="input-file" type="file" name="image" class="file-input" >
                         </div>
                             <button type="submit" class="button-class-create">Crear Producto</button>
                 </form>

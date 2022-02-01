@@ -1,7 +1,7 @@
 const express = require ("express");
 const router = express.Router();
 const controller = require("../controller/productController")
-
+const fileUpload = require('../middlewares/multerMD');
 
 
 //productList
@@ -14,7 +14,7 @@ router.get('/cart/:id', controller.addCart);
 //newProduct
 router.get('/new', controller.create);
 //POST
-router.post("/", controller.add);
+router.post("/", fileUpload.single('image'), controller.add);
 
 //modProduct
 router.get('/edit/:id', controller.edit);
