@@ -1,3 +1,4 @@
+const {validatorResult} = require("express-validator");
 const controlador = {
     login: (req, res)=>{
         res.render("../views/users/login");

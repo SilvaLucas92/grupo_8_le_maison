@@ -2,8 +2,17 @@ const express = require("express");
 const router = express.Router();
 const multer = require ("multer");
 const path = require ("path");
+const {body} = require ("express-validator");
 const controller = require("../controller/userController.js")
 
+// Express Validator
+
+const validateUser = [
+    body ('name') .notEmpty().withMessage('Campo Obligatorio').bail(),
+    body ('lastName') .notEmpty().withMessage('Campo Obligatorio').bail(),
+    body ('email') .isEmail().withMessage('Campo Obligatorio').bail(),
+    body ('password') .isLength({min:10}).withMessage('Campo Obligatorio').bail(),
+]
 //Configuración Multer
 const storange = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -22,7 +31,7 @@ router.get("/login", controller.login);
 //register
 router.get("/register", controller.register);
 /*Procesar Registro
-router.get("/", upload.single('profile') controller.***);*/
+router.post("/", upload.single('profile'), validateUser, controller.***);*/
 //create
 router.get("/create", controller.create);
 
