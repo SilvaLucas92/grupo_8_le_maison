@@ -68,10 +68,10 @@ const controlador = {
             if (oneProduct.id === id){
                 return{     
                     ...oneProduct,
-                    name: req.body.name,
-                    description: req.body.description,
-                    price: req.body.price,
-                    category: req.body.category,
+                    name: req.body.name? req.body.name : oneProduct.name,
+                    description: req.body.description? req.body.description : oneProduct.description,
+                    price: req.body.price? req.body.price : oneProduct.price,
+                    category: req.body.category? req.body.category : oneProduct.category
                 }
             }
             return oneProduct;
