@@ -1,42 +1,186 @@
 [
-    {"Identificador":1,"Nombre":"Craig","Apellido":"Milch","email":"cmilch0@oracle.com","Contraseña":"8dujVM","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":2,"Nombre":"Patton","Apellido":"Botright","email":"pbotright1@chronoengine.com","Contraseña":"yEcDkMeR","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":3,"Nombre":"Nester","Apellido":"Bowbrick","email":"nbowbrick2@meetup.com","Contraseña":"zH674ZwlT3Z","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":4,"Nombre":"Byrann","Apellido":"Bach","email":"bbach3@kickstarter.com","Contraseña":"jvdufpno","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":5,"Nombre":"Elton","Apellido":"Whicher","email":"ewhicher4@posterous.com","Contraseña":"fvxGUMRgXHRH","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":6,"Nombre":"Rhetta","Apellido":"Wickwar","email":"rwickwar5@live.com","Contraseña":"LrPxpwgu","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":7,"Nombre":"Budd","Apellido":"Badsey","email":"bbadsey6@dropbox.com","Contraseña":"jcnA2VxNF4","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":8,"Nombre":"Cookie","Apellido":"Bracci","email":"cbracci7@census.gov","Contraseña":"DeKe8h","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":9,"Nombre":"Ermin","Apellido":"Ferschke","email":"eferschke8@huffingtonpost.com","Contraseña":"Dj26Cxcpa","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":10,"Nombre":"Tamra","Apellido":"Hlavecek","email":"thlavecek9@salon.com","Contraseña":"bCzD946nF0A","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":11,"Nombre":"Bentley","Apellido":"Cordaroy","email":"bcordaroya@dion.ne.jp","Contraseña":"1LdOTHyJ1","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":12,"Nombre":"Ira","Apellido":"Sturridge","email":"isturridgeb@deliciousdays.com","Contraseña":"agNnWZJ","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":13,"Nombre":"Willdon","Apellido":"Erickssen","email":"werickssenc@prlog.org","Contraseña":"08vCKRN8","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":14,"Nombre":"Marcellus","Apellido":"Simcock","email":"msimcockd@desdev.cn","Contraseña":"XgESXD8bUf","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":15,"Nombre":"Alysia","Apellido":"Trinke","email":"atrinkee@vimeo.com","Contraseña":"81BIYvX0A","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":16,"Nombre":"Evanne","Apellido":"Probet","email":"eprobetf@jimdo.com","Contraseña":"GrPsuo63","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":17,"Nombre":"Dex","Apellido":"Dizlie","email":"ddizlieg@scribd.com","Contraseña":"YwJOoYIjwVW","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":18,"Nombre":"Eb","Apellido":"Lindelof","email":"elindelofh@nyu.edu","Contraseña":"RQFUspObN1I","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":19,"Nombre":"Ranna","Apellido":"Rowberry","email":"rrowberryi@privacy.gov.au","Contraseña":"wCVvgb","categoria":"user","image":"error: Field 'id' not found"},
-
-    {"Identificador":20,"Nombre":"Barbe","Apellido":"Sirmon","email":"bsirmonj@yandex.ru","Contraseña":"W9aC4CznSkji","categoria":"user","image":"error: Field 'id' not found"}
-
+ {
+  "id": 2,
+  "name": "Patton",
+  "lastName": "Botright",
+  "email": "pbotright1@chronoengine.com",
+  "password": "yEcDkMeR",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 3,
+  "name": "Nester",
+  "lastName": "Bowbrick",
+  "email": "nbowbrick2@meetup.com",
+  "password": "zH674ZwlT3Z",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 4,
+  "name": "Byrann",
+  "lastName": "Bach",
+  "email": "bbach3@kickstarter.com",
+  "password": "jvdufpno",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 5,
+  "name": "Elton",
+  "lastName": "Whicher",
+  "email": "ewhicher4@posterous.com",
+  "password": "fvxGUMRgXHRH",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 6,
+  "name": "Rhetta",
+  "lastName": "Wickwar",
+  "email": "rwickwar5@live.com",
+  "password": "LrPxpwgu",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 7,
+  "name": "Budd",
+  "lastName": "Badsey",
+  "email": "bbadsey6@dropbox.com",
+  "password": "jcnA2VxNF4",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 8,
+  "name": "Cookie",
+  "lastName": "Bracci",
+  "email": "cbracci7@census.gov",
+  "password": "DeKe8h",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 9,
+  "name": "Ermin",
+  "lastName": "Ferschke",
+  "email": "eferschke8@huffingtonpost.com",
+  "password": "Dj26Cxcpa",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 10,
+  "name": "Tamra",
+  "lastName": "Hlavecek",
+  "email": "thlavecek9@salon.com",
+  "password": "bCzD946nF0A",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 11,
+  "name": "Bentley",
+  "lastName": "Cordaroy",
+  "email": "bcordaroya@dion.ne.jp",
+  "password": "1LdOTHyJ1",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 12,
+  "name": "Ira",
+  "lastName": "Sturridge",
+  "email": "isturridgeb@deliciousdays.com",
+  "password": "agNnWZJ",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 13,
+  "name": "Willdon",
+  "lastName": "Erickssen",
+  "email": "werickssenc@prlog.org",
+  "password": "08vCKRN8",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 14,
+  "name": "Marcellus",
+  "lastName": "Simcock",
+  "email": "msimcockd@desdev.cn",
+  "password": "XgESXD8bUf",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 15,
+  "name": "Alysia",
+  "lastName": "Trinke",
+  "email": "atrinkee@vimeo.com",
+  "password": "81BIYvX0A",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 16,
+  "name": "Evanne",
+  "lastName": "Probet",
+  "email": "eprobetf@jimdo.com",
+  "password": "GrPsuo63",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 17,
+  "name": "Dex",
+  "lastName": "Dizlie",
+  "email": "ddizlieg@scribd.com",
+  "password": "YwJOoYIjwVW",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 18,
+  "name": "Eb",
+  "lastName": "Lindelof",
+  "email": "elindelofh@nyu.edu",
+  "password": "RQFUspObN1I",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 19,
+  "name": "Ranna",
+  "lastName": "Rowberry",
+  "email": "rrowberryi@privacy.gov.au",
+  "password": "wCVvgb",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "id": 20,
+  "name": "Barbe",
+  "lastName": "Sirmon",
+  "email": "bsirmonj@yandex.ru",
+  "password": "W9aC4CznSkji",
+  "image": "error: Field 'id' not found"
+ },
+ {
+  "name": "Lucas ",
+  "lastName": "Silva",
+  "email": "l.silva8692@gmail.com",
+  "id": 21,
+  "password": "$2a$10$rUya/K3zrXvWGwiK2OjmXu6igPz.k/zjCQt3QjUhagYxsVGfuyO3O",
+  "image": "img-1644009634230.jpg"
+ },
+ {
+  "name": "Carlos ",
+  "lastName": "Silva",
+  "email": "carlos@gmail.com",
+  "id": 22,
+  "password": "$2a$10$5IGPYB2.qY0RDDment6bbevq2KEVG0mlQICiChiFIJwzwBgdcc.32",
+  "image": "img-1644009721419.jpg"
+ },
+ {
+  "name": "Mesa",
+  "lastName": "Silva",
+  "email": "juju@gamail.com",
+  "id": 23,
+  "password": "$2a$10$iELs2C9s8bTuZ1M8JtUSKOgmo0/DGjhuW8w1iVdsMQgpphw6XjA02",
+  "image": "img-1644009753025.jpg"
+ },
+ {
+  "id": 24,
+  "name": "Mesa",
+  "lastName": "sila",
+  "email": "keith@gmail.com",
+  "password": "$2a$10$tA/aYJhg9l7GX1QIVM0SNehTaDxS4dWrri58eVh74uw6atbyVo4/u",
+  "image": "img-1644009832630.jpg"
+ }
 ]

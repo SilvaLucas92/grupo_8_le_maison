@@ -5,7 +5,7 @@
     <%- include('../partials/header.ejs') %>
     <main>
         <section class="section-register">
-            <form action="" method="get" enctype="multipart/form-data" class="container-register">
+            <form action="/user/register" method="POST" enctype="multipart/form-data" class="container-register">
                     <h4>Registrate</h4>
                     <div class="div-input-register">
                         <input type="text" name="name" id="nombre-usuario" placeholder="Nombre">
@@ -13,13 +13,11 @@
                         <input type="email" name="email" placeholder="E-mail">
                         <input type="password" value="contra" name="password" placeholder="Password">
                         <i class="fas fa-eye-slash"></i>
-                        <input type="password" value="contra" name="password" placeholder="Repetir Password">
-                        <i class="fas fa-eye-slash"></i>
-                        </div>
-                        <div class="div-input-file">
+                    </div>
+                    <div class="div-input-file">
                         <label for="input-file"> Ingrese una Imagen </label>
                         <input  id="input-file" type="file" name="image" class="file-input" >
-                        </div>
+                    </div>
                         <div class="div-checkbox-register">
                         <input  type="checkbox">
                         <label>Al marcar esta casilla indico que he leido y estoy de acuerdo con los terminos y condiciones y la politica de privacidad de LeMaison</label>

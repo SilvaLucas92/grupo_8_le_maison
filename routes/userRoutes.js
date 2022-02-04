@@ -14,24 +14,23 @@ const validateUser = [
     body ('password') .isLength({min:10}).withMessage('Campo Obligatorio').bail(),
 ]
 //Configuración Multer
-const storange = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../public/images/profile'))
+        cb(null, path.join(__dirname, '../public/images'))
     },
     filename: (req, file, cb) => {
         const newFilname = 'img-' + Date.now() + path.extname(file.originalname);
-        cb(null, )
+        cb(null, newFilname)
     }
 });
 
-const upload = multer ({ storange });
+const upload = multer ({ storage });
 
 //login
 router.get("/login", controller.login);
 //register
 router.get("/register", controller.register);
-/*Procesar Registro
-router.post("/", upload.single('profile'), validateUser, controller.***);*/
+router.post("/register", upload.single('image'), controller.store);
 //create
 router.get("/create", controller.create);
 
