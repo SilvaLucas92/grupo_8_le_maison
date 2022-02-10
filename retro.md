@@ -28,10 +28,16 @@
 
 <p> 1- Debemos comenzar a hacer como grupo es mejorar la comunicacion y administrar mejor los tiempos para no llegar justos al dia final.<br>
     2- Lo que hay que hacer mas es organizar meetings para coordinar el proyecto.<br>
-    3- Seguir manteniendo la buena comnunicación y compañerismo para lograr los objetivos estabvlecidos.<br>
-    4- No dejar el tranajo fuerte para el último momento .<br>
+    3- Seguir manteniendo la buena comnunicación y compañerismo para lograr los objetivos establecidos.<br>
+    4- No dejar el trabajo fuerte para el último momento .<br>
     5- No hay que procastinar mas. <br><br>
 
 <h2> Tablero de Trello Sprint 4 </h2>
 
 <h4> https://trello.com/b/PbKAlhRy/proyecto-integrador </h4>
+
+<h1> Retro 4 </h1>
+
+<p> 1- Seguir manteniendo la buena comunicación y compañerismo para lograr los objetivos establecidos.<br>
+    2- Continuar trabajando en equipo <br>
+    3- Mantener el compromiso de trabajar con tiempo.<br>
