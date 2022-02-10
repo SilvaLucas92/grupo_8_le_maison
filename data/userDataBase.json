@@ -182,5 +182,45 @@
   "email": "keith@gmail.com",
   "password": "$2a$10$tA/aYJhg9l7GX1QIVM0SNehTaDxS4dWrri58eVh74uw6atbyVo4/u",
   "image": "img-1644009832630.jpg"
+ },
+ {
+  "id": 25,
+  "name": "",
+  "lastName": "",
+  "email": "",
+  "password": "$2a$10$FYHpBLP4GpEUElSMe5L3oOSwTc53p2EH0EI.Oi5OpLPTCjY91GBEC",
+  "image": null
+ },
+ {
+  "id": 26,
+  "name": "nombre",
+  "lastName": "apellido",
+  "email": "email@email.com",
+  "password": "$2a$10$.1whkZKBJkiP/cE1pT7YQOou8qWeupQ5b14J/UPfepy2VoOylpTrC",
+  "image": "img-1644511472274.png"
+ },
+ {
+  "id": 27,
+  "name": "Dir",
+  "lastName": "Ruiz",
+  "email": "dir18@gmail.com",
+  "password": "$2a$10$kc8TRXLfoYYGvP6MRLPLCebSU6xOoZWmMT8KWFrqE8hvwMZssoP46",
+  "image": "img-1644515069858.png"
+ },
+ {
+  "id": 28,
+  "name": "prueba",
+  "lastName": "prueba2",
+  "email": "email@prueba.com",
+  "password": "$2a$10$omQPcasKL5y9s7uhcmc8nOHQGR9J5Cz2JbDbLpDkcUyyFZ7n.4Z5K",
+  "image": null
+ },
+ {
+  "id": 29,
+  "name": "Paola",
+  "lastName": "Ruiz",
+  "email": "pao12@gmail.com",
+  "password": "$2a$10$/.YQHV0e4iV1749V5pe/8uaBhkUm96sp7/ebj04jCWGPvtXoMinE.",
+  "image": null
  }
 ]
