@@ -222,5 +222,13 @@
   "email": "pao12@gmail.com",
   "password": "$2a$10$/.YQHV0e4iV1749V5pe/8uaBhkUm96sp7/ebj04jCWGPvtXoMinE.",
   "image": null
+ },
+ {
+  "id": 30,
+  "name": "",
+  "lastName": "",
+  "email": "",
+  "password": "$2a$10$wANcmxi0frPKvefP6fJO9uV8HJ.KbmrbiJ09AF2kMJss1R00vXX5O",
+  "image": null
  }
 ]
