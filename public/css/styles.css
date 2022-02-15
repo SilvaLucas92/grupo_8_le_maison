@@ -474,7 +474,12 @@ body{
     font-size: 25px;
 }
 
-
+.div-input-register p {
+    color: red;
+    width: 80%;
+    margin: auto;
+    padding-top: 5px;
+}
 
 .div-input-register {
     width: 100%;

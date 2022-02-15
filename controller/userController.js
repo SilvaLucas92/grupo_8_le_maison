@@ -17,7 +17,8 @@ const controlador = {
         if(errors.isEmpty()) {
             let emailOk = userData.find(user => user.email === req.body.email);
             if (emailOk) {
-            res.send('Email repetido')
+                let emailError = 'Email logueado'
+            res.render('../views/users/register.ejs', {emailError} )
             }
             let idGenerator = () => {
             let lastUser = userData[userData.length - 1];
