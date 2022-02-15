@@ -1,16 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const {body} = require ("express-validator");
 const controller = require("../controller/userController.js")
 const upload = require('../middlewares/multerMD');
-
-// Express Validator
-const validateUser = [
-    body ('name') .notEmpty().withMessage('Campo Obligatorio').bail(),
-    body ('lastName') .notEmpty().withMessage('Campo Obligatorio').bail(),
-    body ('email') .isEmail().withMessage('Campo Obligatorio').bail(),
-    body ('password') .isLength({min:10}).withMessage('Campo Obligatorio').bail(),
-]
 
 //login
 router.get("/login", controller.login);

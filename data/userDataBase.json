@@ -230,5 +230,37 @@
   "email": "",
   "password": "$2a$10$wANcmxi0frPKvefP6fJO9uV8HJ.KbmrbiJ09AF2kMJss1R00vXX5O",
   "image": null
+ },
+ {
+  "id": 31,
+  "name": "",
+  "lastName": "",
+  "email": "",
+  "password": "$2a$10$n.JjB6TKdG0NeyAukyb2hOM7ehDXuMepTXJEFAMt4mTNyo1yLvbsG",
+  "image": null
+ },
+ {
+  "id": 32,
+  "name": "",
+  "lastName": "",
+  "email": "",
+  "password": "$2a$10$Nhj9i4s/P5f.nPvT6SisUuiSNrfWo2hK61eaJtpgoGdBhFJALAHjm",
+  "image": null
+ },
+ {
+  "id": 33,
+  "name": "",
+  "lastName": "",
+  "email": "",
+  "password": "$2a$10$yF9aVn9zdhBI1RBA6QvAROxLp9QvKEr4NH7ZHc4Po1l509tb9ccUu",
+  "image": null
+ },
+ {
+  "id": 34,
+  "name": "Victoria",
+  "lastName": "Reyes",
+  "email": "vicky@gmail.com",
+  "password": "$2a$10$auqR18LJ9Wjlzr.HhqUzfedihHHsXvEHp.4RLnV4euIuMDpQSp7Z2",
+  "image": null
  }
 ]
