@@ -485,6 +485,15 @@ body{
     width: 100%;
 }
 
+.div-errors {
+    width: 80%;
+    margin: auto;
+}
+
+.div-errors p{
+    color: red;
+}
+
 .div-input-register i {
     color: #616161;
     font-size: 15px;

@@ -22,5 +22,13 @@
   "description": "",
   "category": "",
   "image": null
+ },
+ {
+  "id": 5,
+  "name": "cesto",
+  "price": "4500",
+  "description": "Mesa de vidrio",
+  "category": "",
+  "image": "img-1644965239627.jpg"
  }
 ]
