@@ -549,5 +549,12 @@
   "email": "carla@gmail.com",
   "password": "$2a$10$UpIc1qNqy4H1hKiSMsLOz.G9IjvoPbM9r9i9stb1ux6dEXW/88YLG",
   "image": null
+ },
+ {
+  "id": 73,
+  "name": "nico",
+  "email": "nico@gmail.com",
+  "password": "$2a$10$TidcNaX1m0pkecpQSnOLEOuVmzjw0D6a8ACDtj8yICIaPprIGl6o.",
+  "image": "img-1645033638518.jpg"
  }
 ]

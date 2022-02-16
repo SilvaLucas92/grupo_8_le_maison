@@ -41,9 +41,6 @@ const controlador = {
         fs.writeFileSync(userPath, JSON.stringify(userData, null, ' '));
         return res.redirect('login');    
     },
-    create: (req, res)=>{
-        res.render("../views/users/create");
-    },
     loginProcess: (req, res) =>{
         const userToLogin = userData.find(oneUser => oneUser.email === req.body.email);
         
@@ -55,13 +52,15 @@ const controlador = {
                 delete userToLogin.password
                 
                 req.session.userLogged = userToLogin;
-
-                return res.redirect();
+                console.log(req.session.userLogged);
+                return res.redirect('/');
             }
         }
+        let error = 'email no logueado';
+        res.render('../views/users/login.ejs', {error});
     },
     profile: (req, res) => {
-        return res.render("/user/profile");
+        return res.render("../views/users/userProfile.ejs");
     }
 };
 

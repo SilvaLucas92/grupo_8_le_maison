@@ -5,10 +5,11 @@
     <%- include('../partials/header.ejs') %>
     <main>
         <section class="section-login">
-            <form action="" method="get" class="container-login">
+            <form action="/user/login" method="post" class="container-login">
                     <h4>Si ya se encuentra registrado, inicie sesion.</h4>
                     <div class="div-input">
                         <input type="text" name="email" id="nombre-usuario" placeholder="Ingrese correo electronico o usuario">
+                        <p> <%= locals.error? locals.error : null %> </p>
                         <input type="password" value="contra" name="password" placeholder="password">
                         <i class="fas fa-eye-slash"></i>
                     </div>
