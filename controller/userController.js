@@ -18,15 +18,16 @@ const controlador = {
         if(!errors.isEmpty()) {
             let valores = req.body;
             let validaciones = errors.mapped();
-            res.render('../views/users/register.ejs', {
+            return res.render('../views/users/register.ejs', {
                 validaciones: validaciones,
                 valores: valores
             })
         }        
         let emailOk = userData.find(user => user.email === req.body.email);
         if (emailOk) {
-        res.send('estas logueado');
+        return res.send('estas logueado');
         }
+
         let idGenerator = () => {
         let lastUser = userData[userData.length - 1];
         let lastUserId = lastUser.id;
@@ -49,10 +50,12 @@ const controlador = {
                 delete userToLogin.password
                 req.session.userLogged = userToLogin;
                 return res.redirect('/');
-            } 
+            }
+            let passwordError = 'Contraseña  incorrecta';
+            return res.render('../views/users/login.ejs', {passwordError});
         }
-        let error = 'email no logueado';
-        res.render('../views/users/login.ejs', {error});
+        let error = 'Email no registrado';
+        return res.render('../views/users/login.ejs', {error});
     },
     profile: (req, res) => {
         return res.render("../views/users/userProfile.ejs", {user:req.session.userLogged});

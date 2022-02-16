@@ -9,9 +9,14 @@
                     <h4>Si ya se encuentra registrado, inicie sesion.</h4>
                     <div class="div-input">
                         <input type="text" name="email" id="nombre-usuario" placeholder="Ingrese correo electronico o usuario">
-                        <p> <%= locals.error? locals.error : null %> </p>
+                        <div class="div-input-register">
+                            <p> <%= locals.error? locals.error : null %> </p>
+                        </div> 
                         <input type="password" value="contra" name="password" placeholder="password">
                         <i class="fas fa-eye-slash"></i>
+                        <div class="div-input-register">
+                            <p> <%= locals.passwordError? locals.passwordError : null %> </p>
+                        </div> 
                     </div>
                     <div class="div-checkbox">
                         <input type="checkbox" name="remindMe">
