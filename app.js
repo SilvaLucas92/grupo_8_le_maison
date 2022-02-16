@@ -1,6 +1,7 @@
 const express= require ('express');
 const app = express();
 const path = require ('path');
+const session = require('express-session');
 
 //servidor
 app.listen(8000,() =>
@@ -15,6 +16,12 @@ app.set("view engine", "ejs");
 //req.body
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+}));
 
 //method-override (put, delete)
 

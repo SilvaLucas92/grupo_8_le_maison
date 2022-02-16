@@ -43,6 +43,25 @@ const controlador = {
     },
     create: (req, res)=>{
         res.render("../views/users/create");
+    },
+    loginProcess: (req, res) =>{
+        const userToLogin = userData.find(oneUser => oneUser.email === req.body.email);
+        
+        if (userToLogin) {
+            const isPasswordCorrect = bcrypt.compareSync(req.body.password, userToLogin.password);
+
+            if (isPasswordCorrect){
+
+                delete userToLogin.password
+                
+                req.session.userLogged = userToLogin;
+
+                return res.redirect();
+            }
+        }
+    },
+    profile: (req, res) => {
+        return res.render("/user/profile");
     }
 };
 
