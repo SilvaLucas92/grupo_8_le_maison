@@ -8,12 +8,19 @@
         <img src="/images/LeMaison.png" alt="logo">
         <ul>
             <li><a href="#"><i class="fas fa-search"></i></a></li>
+            <% if(locals.logged) { %>
+                <form action="/user/logout" method="post" >
+                    <li><button type="submit" class="button-log">Logout</button></li>
+                </form>
+                <li> <p> Hi! <%= locals.data.name %> </p> </li>
+                <% } else {  %>
             <li><a href="/user/login"><i class="far fa-user"></i></a></li>
+            <% } %>
         </ul>
     </div>
 
     <nav class="header-nav">
-        <ul>
+        <ul>    
             <li><a href="/">Home</a></li>
             <li><a href="/product">Productos</a></li>
             <li><a href="/product/new">Nuevo Producto</a></li>

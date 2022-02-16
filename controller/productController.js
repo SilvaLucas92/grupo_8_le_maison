@@ -71,7 +71,8 @@ const controlador = {
                     name: req.body.name? req.body.name : oneProduct.name,
                     description: req.body.description? req.body.description : oneProduct.description,
                     price: req.body.price? req.body.price : oneProduct.price,
-                    category: req.body.category? req.body.category : oneProduct.category
+                    category: req.body.category? req.body.category : oneProduct.category,
+                    image: req.file.filename? req.file.filename : oneProduct.image
                 }
             }
             return oneProduct;

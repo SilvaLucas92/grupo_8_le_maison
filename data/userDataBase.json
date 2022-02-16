@@ -156,7 +156,6 @@
   "lastName": "Silva",
   "email": "l.silva8692@gmail.com",
   "id": 21,
-  "password": "$2a$10$rUya/K3zrXvWGwiK2OjmXu6igPz.k/zjCQt3QjUhagYxsVGfuyO3O",
   "image": "img-1644009634230.jpg"
  },
  {
@@ -556,5 +555,12 @@
   "email": "nico@gmail.com",
   "password": "$2a$10$TidcNaX1m0pkecpQSnOLEOuVmzjw0D6a8ACDtj8yICIaPprIGl6o.",
   "image": "img-1645033638518.jpg"
+ },
+ {
+  "id": 74,
+  "name": "Lucas Silva",
+  "email": "lu@gmail.com",
+  "password": "$2a$10$5RCXTlvFtDTeN0aK3lAiO.ibd1rfCQebEHKaXGaeXvpD.d055HhM6",
+  "image": "img-1645040563853.jpg"
  }
 ]

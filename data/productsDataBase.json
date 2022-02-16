@@ -1,11 +1,11 @@
 [
  {
   "id": 2,
-  "name": "Cesto",
+  "name": "Sillon",
   "price": "28500",
-  "description": "Cesto de mimbre",
+  "description": "Sillon dos cuerpos negro",
   "category": "",
-  "image": "img - 1643744895965-498484133-image.jpg"
+  "image": "img-1645043869673.jpg"
  },
  {
   "id": 3,
@@ -17,18 +17,58 @@
  },
  {
   "id": 4,
-  "name": "",
-  "price": "",
-  "description": "",
+  "name": "EscritorioJudith",
+  "price": "15400",
+  "description": "Escritorio Judith",
   "category": "",
-  "image": null
+  "image": "img-1645043916486.jpg"
  },
  {
   "id": 5,
-  "name": "cesto",
-  "price": "4500",
-  "description": "Mesa de vidrio",
+  "name": "Mesa",
+  "price": "54000",
+  "description": "Mesa",
   "category": "",
-  "image": "img-1644965239627.jpg"
+  "image": "img-1645043946038.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Mesa Ratona",
+  "price": "28900",
+  "description": "Mesa ratona de madera",
+  "category": "",
+  "image": "img-1645043976103.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Silla Horus",
+  "price": "9700",
+  "description": "Silla Horus",
+  "category": "",
+  "image": "img-1645044010250.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Silla",
+  "price": "8900",
+  "description": "Silla",
+  "category": "",
+  "image": "img-1645044036435.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Estanteria",
+  "price": "19800",
+  "description": "Estanteria",
+  "category": "",
+  "image": "img-1645044169955.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Estanteria",
+  "price": "16890",
+  "description": "Estanteria deco 4 estantes",
+  "category": "",
+  "image": "img-1645044231122.jpg"
  }
 ]

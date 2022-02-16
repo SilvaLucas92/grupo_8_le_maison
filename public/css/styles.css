@@ -47,16 +47,21 @@ body{
 }
 
 .div-logo ul {
-    width: 30%;
-    display: flex;
+    width: 70%;
+    display: none;
     list-style: none;
-    margin: auto;
+    gap: 10px;
     padding-left: 0px;
 }
 
+
 .div-logo ul li,
 .div-logo-carrito ul li {
-    font-size: 16px;
+    width: 40%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 5px;
     margin: auto;
     color: #424242;
@@ -902,12 +907,28 @@ body{
     .div-logo ul {
         width: 25%;
         position: relative;
-        left: 200px;
+        left: 150px;
         top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .div-logo ul li {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    .button-log {
+        background-color: #000000;
+        color: #ffffff;
+        height: 30px;
+        border-width: 0px;
+        border: none;
+        cursor: pointer;
+    }
+    .button-log:hover {
+        background-color: #ffffff;
+        color: #ffab40;
     }
 
     .icon-bar {

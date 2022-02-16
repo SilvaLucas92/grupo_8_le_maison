@@ -42,25 +42,24 @@ const controlador = {
         return res.redirect('login');    
     },
     loginProcess: (req, res) =>{
-        const userToLogin = userData.find(oneUser => oneUser.email === req.body.email);
-        
+        const userToLogin = userData.find(oneUser => oneUser.email === req.body.email);       
         if (userToLogin) {
             const isPasswordCorrect = bcrypt.compareSync(req.body.password, userToLogin.password);
-
             if (isPasswordCorrect){
-
                 delete userToLogin.password
-                
                 req.session.userLogged = userToLogin;
-                console.log(req.session.userLogged);
                 return res.redirect('/');
-            }
+            } 
         }
         let error = 'email no logueado';
         res.render('../views/users/login.ejs', {error});
     },
     profile: (req, res) => {
-        return res.render("../views/users/userProfile.ejs");
+        return res.render("../views/users/userProfile.ejs", {user:req.session.userLogged});
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/')
     }
 };
 

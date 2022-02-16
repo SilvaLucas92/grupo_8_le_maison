@@ -7,12 +7,12 @@
     <div class="container" style="margin-top: 40px;">
         <div class="row">
             <div class="col-md-3">
-                <h2>Hi <%= locals.userLogged? locals.userLogged.name : '' %><h2>
+                <h2>Hi <%= user.name %><h2>
 
-                    <div class="alert alert-succes"><%= locals.userLogged? locals.userLogged.email : '' %></div>
+                    <div class="alert alert-succes"><%= user.email %></div>
                 </div>
                 <form action="/user/logout" method="post">
-                    <button class="btn btn-warning">Salir</button>button>
+                    <button class="btn btn-warning">Log Out</button>
                 </form>
             </div>
     </div>
