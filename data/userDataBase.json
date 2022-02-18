@@ -560,7 +560,6 @@
   "id": 74,
   "name": "Lucas Silva",
   "email": "lu@gmail.com",
-  "password": "$2a$10$5RCXTlvFtDTeN0aK3lAiO.ibd1rfCQebEHKaXGaeXvpD.d055HhM6",
   "image": "img-1645040563853.jpg"
  },
  {
@@ -569,5 +568,12 @@
   "email": "au@gmail.com",
   "password": "$2a$10$LKUiUbvy985E7ovV.qCcouGa3ddeh3AZT5HGep23pgp/WAPYvqndy",
   "image": "img - 1645045111060-531705247-image.jpg"
+ },
+ {
+  "id": 76,
+  "name": "Keith Richards",
+  "email": "keith_richards@gmail.com",
+  "password": "$2a$10$uoENUMCKvkAH06dCJ5mqlOUQHaTYJJ4r4BeiDCUlHl50v4Pxjg6fO",
+  "image": "img-1645056808980.jpg"
  }
 ]
