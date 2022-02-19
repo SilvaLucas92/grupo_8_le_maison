@@ -2,13 +2,16 @@ const fs = require('fs');
 const path = require('path');
 const productsPath = path.join(__dirname, '../data/productsDataBase.json');
 const productsData = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
-
+const db = require ('../database/models');
 
 const controlador = {
-    browse: (req, res) =>{
-        res.render('../views/products/products.ejs', {
-            list: productsData
-        });
+    browse: async (req, res) => {
+        try {
+            let list = await db.Product.findAll();
+            res.render('../views/products/products.ejs', {list});
+        }catch {
+            console.log('home-err');
+        }
     },
     cart: (req, res) =>{
         res.render('../views/products/productCart');
@@ -30,28 +33,26 @@ const controlador = {
 		});
     },
 
-    create: (req, res) =>{
-        res.render('../views/products/newProduct');
+    create: async (req, res) =>{
+        try {
+            let categories = await db.Category.findAll();
+            res.render('../views/products/newProduct', {categories});
+        } catch {
+            console.log('create-err');
+        }
     },
     
-    add: (req, res) => {
-        const idGenerator = () => {
-            const lastProduct = productsData[productsData.length -1];
-            const newId = lastProduct.id;   
-            return newId  + 1;
-        } 
-
-        productsData.push ({   
-            id: idGenerator(),
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            category: req.body.category,
-            image: req.file? req.file.filename : null
-        })
-
-        fs.writeFileSync(productsPath, JSON.stringify(productsData, null, ' '));
-        return res.redirect('/product')
+    add: async function(req, res) {
+        try {
+            let product = await db.Product.create({
+                ...req.body,
+                cat_id: req.body.category,
+                image: req.file? req.file.filename : ''
+            });
+            return res.redirect('/product');
+        } catch {
+            console.log('add-err');
+        }
     },
 
     edit: (req, res) => {

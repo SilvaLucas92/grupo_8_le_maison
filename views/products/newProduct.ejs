@@ -14,11 +14,9 @@
                             <input type="text" name="description"  placeholder="Descripcion">
                                 <select name="category" placeholder="Categorias">
                                     <option value="">Categorias</option>
-                                    <option value="">Mesas</option>
-                                    <option value="">Escritorios</option>
-                                    <option value="">Sillas</option>
-                                    <option value="">Camas</option>
-                                    <option value="">Otros</option>
+                                    <% categories.forEach(category => { %> 
+                                        <option value="<%= category.id %>"> <%= category.name %>  </option>
+                                        <%})%>  
                                 </select>
                             <input type="number" name="price" id="nombre-usuario" placeholder="Precio">
                         </div>
