@@ -2,12 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const productsPath = path.join(__dirname, '../data/productsDataBase.json');
 const productsData = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
-const db = require ('../database/models');
+const { Product } = require ('../database/models');
 
 const controlador = {
     browse: async (req, res) => {
         try {
-            let list = await db.Product.findAll();
+            let list = await Product.findAll();
             res.render('../views/products/products.ejs', {list});
         }catch {
             console.log('home-err');
