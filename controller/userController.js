@@ -4,14 +4,17 @@ const fs =  require('fs');
 const userPath = path.join(__dirname, '../data/userDataBase.json');
 const userData = JSON.parse(fs.readFileSync(userPath, 'utf-8'));
 const bcrypt = require('bcryptjs');
+const { User } = require ('../database/models');
 
 const controlador = {
     login: (req, res)=>{
         res.render("../views/users/login");
     },
+    
     register: (req, res)=>{
         res.render("../views/users/register");
     },
+    
     store: (req, res) => {
         const errors = validationResult(req);
         console.log(errors);

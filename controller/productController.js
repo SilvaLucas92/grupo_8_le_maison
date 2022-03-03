@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const productsPath = path.join(__dirname, '../data/productsDataBase.json');
 const productsData = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
-const { Product } = require ('../database/models');
+const { Product, Category  } = require ('../database/models');
 
 const controlador = {
     browse: async (req, res) => {
@@ -35,7 +35,7 @@ const controlador = {
 
     create: async (req, res) =>{
         try {
-            let categories = await db.Category.findAll();
+            let categories = await Category.findAll();
             res.render('../views/products/newProduct', {categories});
         } catch {
             console.log('create-err');
@@ -44,7 +44,7 @@ const controlador = {
     
     add: async function(req, res) {
         try {
-            let product = await db.Product.create({
+            let product = await Product.create({
                 ...req.body,
                 cat_id: req.body.category,
                 image: req.file? req.file.filename : ''
