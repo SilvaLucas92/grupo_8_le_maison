@@ -3,6 +3,7 @@ const path = require('path');
 const productsPath = path.join(__dirname, '../data/productsDataBase.json');
 const productsData = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 const { Product, Category  } = require ('../database/models');
+const {Op} = require('sequelize');
 
 const controlador = {
     browse: async (req, res) => {
@@ -12,6 +13,15 @@ const controlador = {
         }catch {
             console.log('home-err');
         }
+    },
+    search: async (req, res) => {
+            let list = await Product.findAll({
+                where: {
+                    name: {[Op.like]: '%' + req.query.product + '%'}
+                }
+            });
+            return res.render('../views/products/search.ejs', {list});
+
     },
     cart: (req, res) =>{
         res.render('../views/products/productCart');
