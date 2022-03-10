@@ -10,8 +10,6 @@ router.post('/login', controller.loginProcess);
 //register
 router.get("/register", guestMD, controller.register);
 router.post("/register", upload.single('image'), userValidator, controller.store);
-//profile
-router.get('/userProfile',  controller.profile);
 //logout
 router.post('/logout', controller.logout);
 
