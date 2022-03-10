@@ -22,6 +22,9 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
 }));
+//cookie
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
 
 //method-override (put, delete)
 
