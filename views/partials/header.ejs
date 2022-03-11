@@ -13,6 +13,7 @@
                     <li><button type="submit" class="button-log">Logout</button></li>
                 </form>
                 <li> <p> Hi! <%= locals.data.name %> </p> </li>
+                <li><a href="/user/login"><i class="far fa-user"></i></a></li>
                 <% } else {  %>
             <li><a href="/user/login"><i class="far fa-user"></i></a></li>
             <% } %>

@@ -38,6 +38,9 @@ const controlador = {
                 if(passwordOk) {   
                     delete userToLogin.password;                 
                     req.session.userLogged = userToLogin;
+                    if(req.body.remindMe) {
+                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+                    }
                     return res.redirect('/');
                 }
                 let passwordError = 'Contraseña  incorrecta';
@@ -50,6 +53,7 @@ const controlador = {
         return res.render("../views/users/userProfile.ejs", {user:req.session.userLogged});
     },
     logout: (req, res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/')
     }
