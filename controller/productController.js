@@ -65,14 +65,15 @@ const controlador = {
         }
     },
 
-    edit: (req, res) => {
-        const id = Number(req.params.id);
-        const productFind = productsData.find(oneProduct=>oneProduct.id===id);
+    edit: async (req, res) => {
+        const id = req.params.id;
+        const productFind = await Product.findByPk(id);
+        const categories = await Category.findAll();
         res.render('../views/products/modProduct', {
-            theProduct: productFind
+            theProduct: productFind, categories
         });
     },
-
+//me falta procesar actualizacion
     update:(req, res) => {
         const id = Number(req.params.id);
         const updateProduct = productsData.map(oneProduct => {
