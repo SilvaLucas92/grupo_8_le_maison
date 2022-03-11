@@ -34,10 +34,10 @@ const controlador = {
 			theProduct: productFind
 		});
     } ,
-
-    detail:  (req,res) => {
-		const id = Number(req.params.id); 
-		const productFind = productsData.find(oneProduct => oneProduct.id === id);
+    
+    detail: async (req,res) => {
+		const id = req.params.id; 
+		const productFind = await Product.findByPk(id);
 		return res.render('../views/products/productDetail', {
 			theProduct: productFind
 		});
