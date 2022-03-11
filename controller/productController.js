@@ -37,7 +37,7 @@ const controlador = {
     
     detail: async (req,res) => {
 		const id = req.params.id; 
-		const productFind = await Product.findByPk(id);
+		const productFind = await Product.findByPk(id, { include: ['category']});
 		return res.render('../views/products/productDetail', {
 			theProduct: productFind
 		});
@@ -92,11 +92,10 @@ const controlador = {
         return res.redirect('/product');
     },
 
-    delete: (req, res) => {
-        const id = Number(req.params.id);
-        const productsArrayFiltered = productsData.filter(oneProduct => oneProduct.id !== id);
-        fs.writeFileSync(productsPath, JSON.stringify(productsArrayFiltered, null, ' '));
-        return res.redirect('/product'); 
+    delete: async (req, res) => {
+        const id = req.params.id; 
+		const productDelete = await Product.destroy ({where: { id: id}});
+        return res.redirect('/product');
     }
 };
 
