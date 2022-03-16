@@ -73,10 +73,10 @@ const controlador = {
             theProduct: productFind, categories
         });
     },
-//me falta procesar actualizacion
-    update:(req, res) => {
-        const id = Number(req.params.id);
-        const updateProduct = productsData.map(oneProduct => {
+
+    update: (req, res) => {
+        const id = req.params.id;
+        const updateProduct = Producto.findByPk(oneProduct => {
             if (oneProduct.id === id){
                 return{     
                     ...oneProduct,
