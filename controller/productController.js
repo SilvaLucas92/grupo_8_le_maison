@@ -75,22 +75,36 @@ const controlador = {
     },
 
     update: (req, res) => {
-        const id = req.params.id;
-        const updateProduct = Producto.findByPk(oneProduct => {
-            if (oneProduct.id === id){
-                return{     
-                    ...oneProduct,
-                    name: req.body.name? req.body.name : oneProduct.name,
-                    description: req.body.description? req.body.description : oneProduct.description,
-                    price: req.body.price? req.body.price : oneProduct.price,
-                    category: req.body.category? req.body.category : oneProduct.category,
-                    image: req.file.filename? req.file.filename : oneProduct.image
-                }
-            }
-            return oneProduct;
-        });
-        fs.writeFileSync(productsPath, JSON.stringify(updateProduct, null, ' '));
-        return res.redirect('/product');
+        if (req.file != undefined) {
+			Product.update({
+				name: req.body.name,
+                category: req.body.category,
+				price: req.body.price,
+				description: req.body.description,
+				image: req.file.image,
+			}, { 
+                where: { id: req.params.id } }).then(() => {
+					res.redirect('/product');
+				})
+				.catch(err =>
+					console.log(err)
+				)
+		} else {
+			Product.update({
+				name: req.body.name,
+                category: req.body.category,
+				price: req.body.price,
+				description: req.body.description,
+				image: req.file.image
+			}, 
+                { where: { id: req.params.id } }).then(() => {
+					res.redirect('/product');
+				})
+				.catch(err =>
+					console.log(err)
+				)
+		}
+
     },
 
     delete: async (req, res) => {
