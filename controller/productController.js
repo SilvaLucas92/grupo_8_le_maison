@@ -81,7 +81,7 @@ const controlador = {
                 category: req.body.category,
 				price: req.body.price,
 				description: req.body.description,
-				image: req.file.image,
+				image: req.file? req.file.filename : ''
 			}, { 
                 where: { id: req.params.id } }).then(() => {
 					res.redirect('/product');
@@ -95,7 +95,7 @@ const controlador = {
                 category: req.body.category,
 				price: req.body.price,
 				description: req.body.description,
-				image: req.file.image
+				image: Product.image
 			}, 
                 { where: { id: req.params.id } }).then(() => {
 					res.redirect('/product');
