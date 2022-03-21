@@ -7,21 +7,29 @@
         <section class="section-mod">
             
             <form action="/product/<%= theProduct.id %>?_method=put" method="post" class="container-mod" enctype="multipart/form-data">
-                    <h4>Estas Modificando el producto: 
-                    <br>
-                    <%= theProduct.name %></h4>
+                    <h4>Estas Modificando el producto <%= theProduct.name %></h4>
                     <div class="div-input-mod">
-                        <input type="text" name="name" id="nombre-usuario" placeholder="Nombre del Producto" value="<%= theProduct.name %>">
-                        <input type="text" name="description" id="nombre-usuario" placeholder="Descripcion" value="<%= theProduct.description %>">
-                        <select name='category' placeholder="Categorias">
+                        <input type="text" name="name" id="nombre-usuario" placeholder="Nombre del Producto" value=" <%= theProduct.name %>">
+                        <input type="text" name="description" id="nombre-usuario" placeholder="Descripcion" value=" <%= theProduct.description %> ">
+                        <select name="category" placeholder="Categorias">
                             <option value="">Categorias</option>
-                            <option value="">Mesas</option>
-                            <option value="">Escritorios</option>
-                            <option value="">Sillas</option>
-                            <option value="">Camas</option>
-                            <option value="">Otros</option>
+                            <% categories.forEach(category => { %> 
+                                <option value="<%= category.id %>" <%= category.id === theProduct.cat_id? "selected" : '' %> > <%= category.name %>   </option>
+                                <%})%>  
                         </select>
-                        <input type="text" name="price" id="nombre-usuario" placeholder="Precio" value="<%= theProduct.price %>">
+                        <select name="materials" placeholder="materials">
+                            <option value="">Materiales</option>
+                            <% materials.forEach(material => { %> 
+                                <option value="<%= material.id %>" <%= material.id === theProduct.materials.id? "selected" : '' %> > <%= material.name %>  </option>
+                                <%})%>  
+                        </select>
+                    <select name="colors" placeholder="colors">
+                        <option value="">Colores</option>
+                        <% colors.forEach(color => { %> 
+                            <option value="<%= color.id %>" <%= color.id === theProduct.colors.id? "selected" : '' %> > <%= color.name %>  </option>
+                            <%})%>  
+                    </select>
+                        <input type="text" name="price" id="nombre-usuario" placeholder="Precio" value=" <%= theProduct.price %>">
                     </div>
                     <div class="div-input-file">
                         <label for="input-file"> Ingrese una Imagen </label>

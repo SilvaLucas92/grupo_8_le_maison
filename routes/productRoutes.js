@@ -9,7 +9,6 @@ router.get("/", controller.browse);
 //Search
 router.get('/search', controller.search);
 //product cart
-router.get("/cart", controller.cart);
 router.get('/cart/:id', controller.addCart);
 
 //newProduct

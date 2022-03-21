@@ -18,6 +18,18 @@
                                         <option value="<%= category.id %>"> <%= category.name %>  </option>
                                         <%})%>  
                                 </select>
+                                <select name="materials" placeholder="materials">
+                                    <option value="">Materiales</option>
+                                    <% materials.forEach(material => { %> 
+                                        <option value="<%= material.id %>"> <%= material.name %>  </option>
+                                        <%})%>  
+                                </select>
+                                <select name="colors" placeholder="colors">
+                                    <option value="">Colores</option>
+                                    <% colors.forEach(color => { %> 
+                                        <option value="<%= color.id %>"> <%= color.name %>  </option>
+                                        <%})%>  
+                                </select>
                             <input type="number" name="price" id="nombre-usuario" placeholder="Precio">
                         </div>
                         <div class="div-input-file">
