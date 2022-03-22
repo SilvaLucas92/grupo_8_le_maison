@@ -41,3 +41,11 @@
 <p> 1- Seguir manteniendo la buena comunicación y compañerismo para lograr los objetivos establecidos.<br>
     2- Continuar trabajando en equipo <br>
     3- Mantener el compromiso de trabajar con tiempo.<br>
+
+<h1> Retro 6 </h1>
+
+<p> 
+    1- Seguir manteniendo la weekly para fortalecer la comunicacion.<br>
+    2- Continuar administrando bien el trabajo asi llegamos a los objetivos. <br>
+    3- No dejar las cosas para ultimo momento. <br>
+</p>
