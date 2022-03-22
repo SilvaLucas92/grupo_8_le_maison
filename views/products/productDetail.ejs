@@ -24,12 +24,14 @@
                         <a href="/product/cart/<%= theProduct.id %>">
                             <button>Agregar</button>
                         </a>
+                        <% if(locals.logged) { %>
                         <a href="/product/edit/<%= theProduct.id %>">
                             <button type="submit" class="button-class-mod">Modificar</button>
                         </a> 
                         <form method="post" action="/product/<%= theProduct.id %>?_method=delete">
                             <button type="submit" class="button-class-mod">Borrar Producto</button>
                         </form> 
+                        <% } %>
                     </div>
                     </div>
         </section>

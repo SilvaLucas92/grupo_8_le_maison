@@ -44,7 +44,6 @@ const controlador = {
             console.log('detail-err: ' + err)
         }
     },
-
     create: async (req, res) =>{
         try {
             let categories = await db.Category.findAll();
@@ -54,8 +53,7 @@ const controlador = {
         } catch (err) {
             console.log('create-err: ' + err );
         }
-    },
-    
+    },    
     add: async function(req, res) {
         try {
             let product = await db.Product.create({
@@ -70,7 +68,6 @@ const controlador = {
             console.log('add-err: ' + err);
         }
     },
-
     edit: async (req, res) => {
         try {
             const id = req.params.id;
@@ -87,7 +84,6 @@ const controlador = {
             console.log('edit-err: ' + err);
         }
     },
-
     update: async (req, res) => {
             let theProduct = await db.Product.findByPk(req.params.id, {
                 include:['materials', 'colors']
@@ -107,7 +103,6 @@ const controlador = {
 
             return res.redirect('/product');
     },
-
     delete: async (req, res) => {
             const id = req.params.id; 
             let productDelete = await db.Product.findByPk(id, {
