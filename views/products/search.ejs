@@ -10,7 +10,7 @@
             <% for (let i = 0; i<list.length; i++) {%>                    
             <article class="section2-art">
                 <a href="/product/<%= list[i].id %>">
-                    <img src="images/<%= list[i].image %>" alt="">
+                    <img src="/images/<%= list[i].image %>" alt="">
                     <div class="art-text">
                     <h3><%= '$ ' + list[i].price %></h3>
                     <span><%= list[i].name %></span> 
