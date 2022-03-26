@@ -414,12 +414,12 @@ body{
     padding-right: 20px;
     position: relative;
     bottom: 30px;
+    cursor: pointer;
 }
 
 .div-checkbox {
     width: 80%;
     text-align: left;
-    padding: 10px 10px 10px 0;
 }
 
 .button-class {
