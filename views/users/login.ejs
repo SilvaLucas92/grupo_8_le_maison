@@ -4,29 +4,29 @@
 <body>
     <%- include('../partials/header.ejs') %>
     <main>
-        <section class="section-login">
+        <section class="section-register">
             <form action="/user/login" method="post" class="container-create" id="userForm">
                     <h4>Si ya se encuentra registrado, inicie sesion.</h4>
                     <div class="div-input-register">
                         <input type="text" name="email" id="nombre-usuario" placeholder="Ingrese correo electronico o usuario">
                         <div class="div-input-errors">
-                            <span> <%= locals.error? locals.error : null %> </span>
-                            <span id="spanErrorEmail"></span>
+                            <span id="spanErrorEmail"> <%= locals.error? locals.error : null %> </span>
                         </div> 
                         <input type="password"  name="password" placeholder="password">
                         <div class="iconPassword">
                             <i class="fas fa-eye-slash" id="iconPassword"></i>
                         </div>
                         <div class="div-input-errors">
-                            <span> <%= locals.passwordError? locals.passwordError : null %> </span>
-                            <span id="spanErrorPassword"></span>
+                            <span  id="spanErrorPassword" > <%= locals.passwordError? locals.passwordError : null %> </span>
                         </div> 
                     </div>
                     <div class="div-checkbox">
                         <input type="checkbox" name="remindMe">
                         <label>Recordarme</label>   
                     </div>
-                    <span id="spanErrorSubmit"></span>
+                    <div class="div-input-errors">
+                        <span id="spanErrorSubmit"></span>
+                    </div>
                     <button type="submit" class="button-class">Enviar</button>
                     <a href="#">¿Olvido su contraseña?</a>
                     <p>Si aun no posee una cuenta, puedes crearla <a href="/user/register" class="inicie-class"> aqui </a> </p>

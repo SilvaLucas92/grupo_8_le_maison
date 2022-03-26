@@ -10,21 +10,18 @@
                     <div class="div-input-register">
                         <input type="text" name="name" placeholder="Nombre y Apellido" value= "<%= locals.valores? valores.name : null %>">
                         <div class="div-input-errors">
-                            <span> <%= locals.validaciones && validaciones.name? validaciones.name.msg : null %> </span>
-                            <span id="spanErrorName"></span>
+                            <span id="spanErrorName"> <%= locals.validaciones && validaciones.name? validaciones.name.msg : null %> </span>
                         </div>
                         <input type="email" name="email" placeholder="E-mail" value= "<%= locals.valores? valores.email : null %>">
                         <div class="div-input-errors">
-                            <span> <%= locals.validaciones && validaciones.email? validaciones.email.msg : null %> </span>
-                            <span id="spanErrorEmail"></span>
+                            <span id="spanErrorEmail"> <%= locals.validaciones && validaciones.email? validaciones.email.msg : null %> </span>
                         </div>
                         <input type="password" placeholder="Password" name="password">
                         <div class="iconPassword">
                             <i class="fas fa-eye-slash" id="iconPassword"></i>
                         </div>
                         <div class="div-input-errors">
-                            <span> <%= locals.validaciones && validaciones.password? validaciones.password.msg : null %> </span>
-                            <span id="spanErrorPassword"></span>
+                            <span id="spanErrorPassword"> <%= locals.validaciones && validaciones.password? validaciones.password.msg : null %> </span>
                         </div>
                     </div>
                     <div class="div-checkbox-register">
@@ -34,6 +31,8 @@
                     <div class="div-checkbox-register">
                         <input type="checkbox">
                         <label>Deseo recibir informacion comercial de LeMaison</label>
+                    </div>
+                    <div class="div-input-errors">
                         <span id="spanErrorSubmit"></span>
                     </div>
                         <button type="submit" class="button-class-register">Crear Usuario</button>

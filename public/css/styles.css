@@ -387,22 +387,24 @@ body{
 }
 
 
-.div-input {
+
+
+.div-input-errors {
     width: 100%;
 }
 
-.div-input-register input {
+.div-input-errors span {
+    color: red;
     width: 80%;
-    height: 40px;
     margin: auto;
+    padding: 5px 5px 5px 0;
     display: block;
-    padding: 5px;
-    margin-top: 10px;
-    border-width: 0,5px;
+    border: solid red 1px;
 }
 
 .iconPassword {
     width: 80%;
+    height: 0px;
     text-align: end;
     margin: auto;
 }
@@ -414,18 +416,20 @@ body{
     padding-right: 20px;
     position: relative;
     bottom: 30px;
-    cursor: pointer;
 }
 
 .div-checkbox {
     width: 80%;
     text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .button-class {
     width: 35%;
     height: 35px;
     padding: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
     background-color: #000000;
     border-width: 0px;
@@ -473,17 +477,7 @@ body{
 .container-register:hover {
     box-shadow: 0px -11px 13px 1px rgba(143, 143, 143, 0.46);
 }
-.div-input-errors {
-    width: 100%;
-}
 
-.div-input-errors span {
-    color: red;
-    width: 80%;
-    margin: auto;
-    padding: 10px 0 10px 0;
-    display: block;
-}
 
 .div-input-register {
     width: 100%;
