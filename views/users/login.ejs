@@ -4,23 +4,32 @@
 <body>
     <%- include('../partials/header.ejs') %>
     <main>
-        <section class="section-login">
-            <form action="/user/login" method="post" class="container-login">
+        <section class="section-register">
+            <form action="/user/login" method="post" class="container-create" id="userForm">
                     <h4>Si ya se encuentra registrado, inicie sesion.</h4>
-                    <div class="div-input">
-                        <input type="text" name="email" id="nombre-usuario" placeholder="Ingrese correo electronico o usuario">
+                    <div class="div-input-register">
+                        <label for="">Email</label>
+                        <input type="text" name="email"  >
                         <div class="div-input-register">
-                            <p> <%= locals.error? locals.error : null %> </p>
+                            <span> <%= locals.error? locals.error : null %> </span>
+                            <span id="spanErrorEmail" ></span>
                         </div> 
-                        <input type="password" value="contra" name="password" placeholder="password">
-                        <i class="fas fa-eye-slash"></i>
+                        <label for="">Contraseña</label>
+                        <input type="password"  name="password">
+                        <div class="iconPassword">
+                            <i class="fas fa-eye-slash" id="iconPassword" ></i>
+                        </div> 
                         <div class="div-input-register">
-                            <p> <%= locals.passwordError? locals.passwordError : null %> </p>
+                            <span> <%= locals.passwordError? locals.passwordError : null %> </span>
+                            <span id="spanErrorPassword" ></span>
                         </div> 
                     </div>
                     <div class="div-checkbox">
                         <input type="checkbox" name="remindMe">
                         <label>Recordarme</label>   
+                    </div>
+                    <div class="div-input-register">
+                        <span id="spanErrorSubmit" ></span>
                     </div>
                     <button type="submit" class="button-class">Enviar</button>
                     <a href="#">¿Olvido su contraseña?</a>
@@ -31,4 +40,5 @@
     </main>
     <%- include('../partials/footer.ejs') %>
 </body>
+<script src="/js/loginValidation.js"></script>
 </html>
