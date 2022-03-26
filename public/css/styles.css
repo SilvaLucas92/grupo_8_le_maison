@@ -380,78 +380,44 @@ body{
     margin: auto;
 }
 
-.container-login {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    padding: 5px;
-    background-color: #ffab40;
-    border-radius: 10px;
-    box-shadow: none;
-}
 
-.container-login:hover {
-    box-shadow: 0px -11px 13px 1px rgba(143, 143, 143, 0.46);
-}
-
-.container-login h4 {
-    width: 70%;
-    text-align: left;
-    font-weight: 700;
-    color: #000000;
-    font-size: 22px;
-}
 
 .inicie-class {
     font-size: 20px;
 }
 
 
-
-.container-login p {
-    text-align: center;
-    color: #616161;
-    font-size: 15px;
-}
-
-.container-login a {
-    text-align: center;
-    color: #000000;
-}
-
 .div-input {
     width: 100%;
 }
 
-.div-input i {
-    color: #616161;
-    font-size: 15px;
-    width: 70%;
-    text-align: end;
-    margin: auto;
-    display: block;
-    position: relative;
-    bottom: 30px;
-    right: 10px;
-}
-
-.div-input input {
-    width: 70%;
+.div-input-register input {
+    width: 80%;
     height: 40px;
     margin: auto;
-    border: solid 2px blue;
     display: block;
     padding: 5px;
     margin-top: 10px;
-    border-width: 0px;
+    border-width: 0,5px;
+}
+
+.iconPassword {
+    width: 80%;
+    text-align: end;
+    margin: auto;
+}
+
+.iconPassword i {
+    color: #616161;
+    font-size: 15px;
+    width: 20%;
+    padding-right: 20px;
+    position: relative;
+    bottom: 30px;
 }
 
 .div-checkbox {
-    width: 70%;
+    width: 80%;
     text-align: left;
     padding: 10px 10px 10px 0;
 }
@@ -472,6 +438,16 @@ body{
     background-color: #ffffff;
     color: #ffab40;
 }
+
+.validInput {
+    border: green 3px solid;
+}
+
+.invalidInput {
+    border: red 3px solid;
+}
+
+
 
 /*Register Styles*/
 
@@ -497,44 +473,20 @@ body{
 .container-register:hover {
     box-shadow: 0px -11px 13px 1px rgba(143, 143, 143, 0.46);
 }
-
-.container-register h4 {
-    width: 80%;
-    text-align: left;
-    margin-bottom: 0;
-    font-size: 25px;
+.div-input-errors {
+    width: 100%;
 }
 
-.div-input-register p {
+.div-input-errors span {
     color: red;
     width: 80%;
     margin: auto;
-    padding-top: 5px;
+    padding: 10px 0 10px 0;
+    display: block;
 }
 
 .div-input-register {
     width: 100%;
-}
-
-.div-errors {
-    width: 80%;
-    margin: auto;
-}
-
-.div-errors p{
-    color: red;
-}
-
-.div-input-register i {
-    color: #616161;
-    font-size: 15px;
-    width: 70%;
-    text-align: end;
-    margin: auto;
-    display: block;
-    position: relative;
-    bottom: 29px;
-    left: 10px;
 }
 
 .div-input-register input {
@@ -543,8 +495,7 @@ body{
     margin: auto;
     display: block;
     padding: 5px;
-    margin-top: 20px;
-    border-width: 0px;
+    border-width: 0,5px;
 }
 
 .div-checkbox-register {
@@ -608,7 +559,7 @@ body{
 .container-create h4 {
     width: 80%;
     text-align: left;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     font-size: 25px;
 }
 
