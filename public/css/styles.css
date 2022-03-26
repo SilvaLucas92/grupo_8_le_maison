@@ -399,7 +399,6 @@ body{
     margin: auto;
     padding: 5px 5px 5px 0;
     display: block;
-    border: solid red 1px;
 }
 
 .iconPassword {
@@ -416,6 +415,7 @@ body{
     padding-right: 20px;
     position: relative;
     bottom: 30px;
+    cursor: pointer;
 }
 
 .div-checkbox {
@@ -445,10 +445,12 @@ body{
 
 .validInput {
     border: green 3px solid;
+    background-color: #65d88b;
 }
 
 .invalidInput {
     border: red 3px solid;
+    background-color: #eb9d9d;
 }
 
 
