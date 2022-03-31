@@ -7,35 +7,56 @@
 
         <main>
             <section class="section-create">
-                <form action="/product" method="POST" class="container-create" enctype="multipart/form-data">
+                <form action="/product" method="POST" class="container-create" id="userForm" enctype="multipart/form-data">
                         <h4>Formulario de Creacion de Productos</h4>
                         <div class="div-input-create">
                             <input type="text" name="name"  placeholder="Nombre del Producto">
+                            <div class="div-input-errors">
+                                <span id="spanErrorName"> <%= locals.error? locals.error : null %> </span>
+                            </div> 
                             <input type="text" name="description"  placeholder="Descripcion">
+                            <div class="div-input-errors">
+                                <span id="spanErrorDescription"> <%= locals.error? locals.error : null %> </span>
+                            </div> 
                                 <select name="category" placeholder="Categorias">
                                     <option value="">Categorias</option>
                                     <% categories.forEach(category => { %> 
                                         <option value="<%= category.id %>"> <%= category.name %>  </option>
                                         <%})%>  
                                 </select>
+                                <div class="div-input-errors">
+                                    <span id="spanErrorCategory"> <%= locals.error? locals.error : null %> </span>
+                                </div> 
                                 <select name="materials" placeholder="materials">
                                     <option value="">Materiales</option>
                                     <% materials.forEach(material => { %> 
                                         <option value="<%= material.id %>"> <%= material.name %>  </option>
                                         <%})%>  
                                 </select>
+                                <div class="div-input-errors">
+                                    <span id="spanErrorMaterial"> <%= locals.error? locals.error : null %> </span>
+                                </div> 
                                 <select name="colors" placeholder="colors">
                                     <option value="">Colores</option>
                                     <% colors.forEach(color => { %> 
                                         <option value="<%= color.id %>"> <%= color.name %>  </option>
                                         <%})%>  
                                 </select>
-                            <input type="number" name="price" id="nombre-usuario" placeholder="Precio">
+                                <div class="div-input-errors">
+                                    <span id="spanErrorColor"> <%= locals.error? locals.error : null %> </span>
+                                </div> 
+                            <input  name="price" id="nombre-usuario" placeholder="Precio">
+                            <div class="div-input-errors">
+                                <span id="spanErrorPrice"> <%= locals.error? locals.error : null %> </span>
+                            </div> 
                         </div>
                         <div class="div-input-file">
                             <label for="input-file"> Ingrese una Imagen </label>
                             <input  id="input-file" type="file" name="image" class="file-input" >
                         </div>
+                        <div class="div-input-errors">
+                            <span id="spanErrorSubmit"></span>
+                        </div> 
                             <button type="submit" class="button-class-create">Crear Producto</button>
                 </form>
             </section>
@@ -44,4 +65,5 @@
 
         <%- include('../partials/footer.ejs') %>
 </body>
+<script src="/js/productValidation.js"></script>
 </html>

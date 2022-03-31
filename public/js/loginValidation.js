@@ -37,7 +37,6 @@ window.addEventListener('load', () => {
             passwordInput.classList.add("validInput");
             spanErrorPassword.innerText = '';
             validForm.passwordInput = true    
-            console.log(validForm)
         }
     });
 

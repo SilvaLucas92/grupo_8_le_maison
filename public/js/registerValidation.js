@@ -26,8 +26,6 @@ window.addEventListener('load', () => {
             validForm.nameInput = true;
         }
     });
-
-
     emailInput.addEventListener('blur', () => {
         if(emailInput.value.trim() == '') {
             emailInput.classList.add('invalidInput');
@@ -39,8 +37,7 @@ window.addEventListener('load', () => {
             spanErrorEmail.innerText = '';
             validForm.emailInput = true;
         }
-    });
-    
+    });   
     passwordInput.addEventListener('blur', () => {
         if(passwordInput.value.trim() == '') {
             passwordInput.classList.add('invalidInput');
@@ -56,8 +53,6 @@ window.addEventListener('load', () => {
 
         }
     });
-
-    console.log(validForm)
     const validateInput = () => {
         const valuesToArray = Object.values(validForm);
         const inputCheck = valuesToArray.findIndex(item => item == false);
