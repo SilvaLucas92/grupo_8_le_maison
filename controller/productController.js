@@ -1,5 +1,6 @@
 const db = require ('../database/models');
 const { Op } = require("sequelize");
+const { validationResult} = require ('express-validator');
 
 const controlador = {
     browse: async (req, res) => {
@@ -55,7 +56,17 @@ const controlador = {
         }
     },    
     add: async function(req, res) {
-        try {
+            const validate = validationResult(req);
+
+            if (validate.errors.length > 0) {
+                return res.render('../views/products/newProduct', {
+                    errors: validate.mapped(),
+                    oldData: req.body
+                });
+            }
+
+
+        /*try {
             let product = await db.Product.create({
                 ...req.body,
                 cat_id: req.body.category,               
@@ -66,7 +77,7 @@ const controlador = {
             return res.redirect('/product');
         } catch (err) {
             console.log('add-err: ' + err);
-        }
+        }*/
     },
     edit: async (req, res) => {
         try {

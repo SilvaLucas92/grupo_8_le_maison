@@ -8,29 +8,44 @@
         <main>
             <section class="section-create">
                 <form action="/product" method="POST" class="container-create" enctype="multipart/form-data">
-                        <h4>Formulario de Creacion de Productos</h4>
+                        <h4>Formulario de Creación de Productos</h4>
                         <div class="div-input-create">
-                            <input type="text" name="name"  placeholder="Nombre del Producto">
+                            <input type="text" name="name" placeholder="Nombre del Producto" value="<%= locals.oldData ? oldData.name : null %> ">
+                            <div class="div-input-errors">
+                                <span id="errorName"> <%= locals.errors && errors.name? errors.name.msg : null %> </span>
+                            </div>
                             <input type="text" name="description"  placeholder="Descripcion">
-                                <select name="category" placeholder="Categorias">
+                            <div class="div-input-errors">
+                                <span id="errorDescription"> <%= locals.errors && errors.description? errors.description.msg : null %> </span>
+                            </div>
+                                <select name="category" placeholder="Categorias" value= " <%= locals.oldData ? oldData.categories : null %>">
                                     <option value="">Categorias</option>
-                                    <% categories.forEach(category => { %> 
-                                        <option value="<%= category.id %>"> <%= category.name %>  </option>
-                                        <%})%>  
+                                    <% if (locals.categories) { %> 
+                                        <% categories.forEach(category => { %> 
+                                            <option value="<%= category.id %>"> <%= category.name %> </option>
+                                        <%})%> 
+                                    <% } %> 
                                 </select>
-                                <select name="materials" placeholder="materials">
+                                <select name="materials" placeholder="materials" value= " <%= locals.oldData ? oldData.materials: null %>">
                                     <option value="">Materiales</option>
-                                    <% materials.forEach(material => { %> 
-                                        <option value="<%= material.id %>"> <%= material.name %>  </option>
-                                        <%})%>  
+                                    <% if (locals.materials) { %>
+                                        <% materials.forEach(material => { %> 
+                                            <option value="<%= material.id %>"> <%= material.name %>  </option>
+                                        <%})%>
+                                    <% } %> 
                                 </select>
-                                <select name="colors" placeholder="colors">
+                                <select name="colors" placeholder="colors" value= " <%= locals.oldData ? oldData.colors: null %>">
                                     <option value="">Colores</option>
-                                    <% colors.forEach(color => { %> 
-                                        <option value="<%= color.id %>"> <%= color.name %>  </option>
-                                        <%})%>  
+                                    <% if (locals.color) { %>
+                                        <% colors.forEach(color => { %> 
+                                            <option value="<%= color.id %>"> <%= color.name %> </option>
+                                        <%})%>
+                                    <% } %>
                                 </select>
-                            <input type="number" name="price" id="nombre-usuario" placeholder="Precio">
+                            <input type="number" name="price" id="nombre-usuario" placeholder="Precio" value= " <%= locals.oldData ? oldData.price : null %>">
+                            <div class="div-input-errors">
+                                <span id="errorPrice"> <%= locals.errors && errors.price ? errors.price.msg : null %> </span>
+                            </div>
                         </div>
                         <div class="div-input-file">
                             <label for="input-file"> Ingrese una Imagen </label>

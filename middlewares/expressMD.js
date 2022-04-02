@@ -1,4 +1,3 @@
-
 // Express Validator
 const {body} = require ("express-validator");
 
@@ -8,4 +7,14 @@ const userValidator = [
     body ('password') .isLength({min:6}).withMessage('La contraseña debe tener como minimo 6 caracteres').bail(),
 ];
 
-module.exports = userValidator ;
+const productValidator = [
+    body ('name').isLength({min: 5}).withMessage('Campo Obligatorio').notEmpty().bail(),
+    body ('description').notEmpty().withMessage('Campo Obligatorio'),
+    body ('category').notEmpty().withMessage('Campo Obligatorio'),
+    body ('materials').notEmpty().withMessage('Campo Obligatorio'),
+    body ('colors').notEmpty().withMessage('Campo Obligatorio'),
+    body ('price').notEmpty().withMessage('Campo Obligatorio')
+]
+
+module.exports = userValidator;
+module.exports = productValidator;
