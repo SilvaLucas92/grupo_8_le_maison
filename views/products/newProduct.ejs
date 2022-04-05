@@ -10,11 +10,11 @@
                 <form action="/product" method="POST" class="container-create" enctype="multipart/form-data">
                         <h4>Formulario de Creación de Productos</h4>
                         <div class="div-input-create">
-                            <input type="text" name="name" placeholder="Nombre del Producto" >
+                            <input type="text" name="name" placeholder="Nombre del Producto" value="<%= locals.oldData ? oldData.name: null %> ">
                             <div class="div-input-errors">
                                 <span id="errorName"> <%= locals.errors && errors.name? errors.name.msg : null %> </span>
                             </div>
-                            <input type="text" name="description"  placeholder="Descripcion">
+                            <input type="text" name="description"  placeholder="Descripcion" value="<%= locals.oldData ? oldData.description : null  %> ">
                             <div class="div-input-errors">
                                 <span id="errorDescription"> <%= locals.errors && errors.description? errors.description.msg : null %> </span>
                             </div>
@@ -42,7 +42,7 @@
                                 </div>
                                 <select name="colors" placeholder="colors" >
                                     <option value="">Colores</option>
-                                    <% if (locals.color) { %>
+                                    <% if (locals.colors) { %>
                                         <% colors.forEach(color => { %> 
                                             <option value="<%= color.id %>"> <%= color.name %> </option>
                                         <%})%>

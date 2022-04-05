@@ -57,27 +57,28 @@ const controlador = {
     },    
     add: async function(req, res) {
             const validate = validationResult(req);
-
+            console.log (validate);
             if (validate.errors.length > 0) {
+                let oldData =  req.body;
+                let errors = validate.mapped();
                 return res.render('../views/products/newProduct', {
-                    errors: validate.mapped(),
-                    oldData: req.body
+                    errors: errors,
+                    oldData: oldData
                 });
+            } else {
+                try {
+                    let product = await db.Product.create({
+                        ...req.body,
+                        cat_id: req.body.category,               
+                        image: req.file? req.file.filename : ''
+                    });
+                    product.addMaterials(req.body.materials);
+                    product.addColors(req.body.colors);
+                    return res.redirect('/product');
+                } catch (err) {
+                    console.log('add-err: ' + err);
+                }
             }
-
-
-        /*try {
-            let product = await db.Product.create({
-                ...req.body,
-                cat_id: req.body.category,               
-                image: req.file? req.file.filename : ''
-            });
-            product.addMaterials(req.body.materials);
-            product.addColors(req.body.colors);
-            return res.redirect('/product');
-        } catch (err) {
-            console.log('add-err: ' + err);
-        }*/
     },
     edit: async (req, res) => {
         try {
