@@ -17,7 +17,7 @@ const productValidator = [
         .isLength({min: 20}).withMessage('Ingrese un texto de al menos 20 caracteres'),
     body ('category').notEmpty().withMessage('Selecciona una categoría'),
     body ('materials').notEmpty().withMessage('Selecciona un tipo de material'),
-    //body ('colors').notEmpty().withMessage('Selecciona un color'),
+    body ('colors').notEmpty().withMessage('Selecciona un color'),
     body ('price')
         .notEmpty().withMessage('Agregale un precio a tu producto').bail(),
     body ('image').custom((value, { req }) => {
