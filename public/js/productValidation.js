@@ -20,6 +20,7 @@ window.addEventListener('load', () => {
         }
         else if (nameInput.value.length < 5) {
             nameInput.classList.add('invalidInput');
+            nameInput.nextElementSibling.classList.add ('span-err');
             nameInput.nextElementSibling.innerText = "El nombre del Producto debe tener al menos 5 caracteres"
         }
         else {
@@ -52,6 +53,11 @@ window.addEventListener('load', () => {
             priceInput.classList.add('invalidInput');
             priceInput.nextElementSibling.classList.add ('span-err');
             priceInput.nextElementSibling.innerText = "Ingrese solo numeros"
+        }
+        else if (priceInput.value.trim() == '') {
+            priceInput.classList.add('invalidInput');
+            priceInput.nextElementSibling.classList.add ('span-err');
+            priceInput.nextElementSibling.innerText = "Ingrese el precio del producto"
         }
         else {
             priceInput.classList.remove('invalidInput');
