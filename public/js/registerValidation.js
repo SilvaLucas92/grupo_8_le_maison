@@ -37,15 +37,19 @@ window.addEventListener('load', () => {
     }
     function validatePass (e) {
         const field = e.target;
-        const spanError = field.nextElementSibling;
-        console.log (spanError)
+        const divError = field.nextElementSibling;
+        console.log (divError)
         const password = passwordInput.value;
-        const er = /^[a-z0-9_-]{8,18}$/
+        const er = /^[a-z0-9_-]{8,15}$/
         if(!er.test(password)) {
-            spanError.innerText = `El campo ${field.name} es obligatorio`;
-            spanError.style.color = 'red'
+            divError.innerText = 'Ingresa una contraseña de 8 a 15 caracteres';
+            divError.style.color = 'red'
+            divError.style.textAlign = 'left'
         }else{
-            spanError.innerText = '';
+            divError.innerText = '';
+        }
+        if(password.trim() === '') {
+            divError.innerText = `El campo ${field.name} es obligatorio`;
         }
 
     }
