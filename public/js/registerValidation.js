@@ -2,6 +2,10 @@ window.addEventListener('load', () => {
     const passwordInput = document.querySelector('input[name=password]');
     const iconPassword = document.querySelector('#iconPassword');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> lucas-branch
     iconPassword.addEventListener('click', () => {
         if (passwordInput.type == "password") { 
             iconPassword.classList.remove("fa-eye-slash");
@@ -14,4 +18,11 @@ window.addEventListener('load', () => {
             iconPassword.classList.add('fa-eye-slash');
             passwordInput.type = "password"
         }
+<<<<<<< HEAD
 })})
+=======
+})})
+
+
+
+>>>>>>> lucas-branch
