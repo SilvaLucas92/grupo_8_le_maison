@@ -12,11 +12,11 @@
                         <div class="div-input-create">
                             <input type="text" name="name"  placeholder="Nombre del Producto">
                             <div class="div-input-errors">
-                                <span id="spanErrorName"> <%= locals.error? locals.error : null %> </span>
+                                <span class="span-err"><%= locals.error? locals.error : null %></span>
                             </div> 
                             <input type="text" name="description"  placeholder="Descripcion">
                             <div class="div-input-errors">
-                                <span id="spanErrorDescription"> <%= locals.error? locals.error : null %> </span>
+                                <span  class="span-err" id="spanErrorDescription"> <%= locals.error? locals.error : null %> </span>
                             </div> 
                                 <select name="category" placeholder="Categorias">
                                     <option value="">Categorias</option>
@@ -25,7 +25,7 @@
                                         <%})%>  
                                 </select>
                                 <div class="div-input-errors">
-                                    <span id="spanErrorCategory"> <%= locals.error? locals.error : null %> </span>
+                                    <span  class="span-err" id="spanErrorCategory"> <%= locals.error? locals.error : null %> </span>
                                 </div> 
                                 <select name="materials" placeholder="materials">
                                     <option value="">Materiales</option>
@@ -34,7 +34,7 @@
                                         <%})%>  
                                 </select>
                                 <div class="div-input-errors">
-                                    <span id="spanErrorMaterial"> <%= locals.error? locals.error : null %> </span>
+                                    <span  class="span-err" id="spanErrorMaterial"> <%= locals.error? locals.error : null %> </span>
                                 </div> 
                                 <select name="colors" placeholder="colors">
                                     <option value="">Colores</option>
@@ -43,26 +43,25 @@
                                         <%})%>  
                                 </select>
                                 <div class="div-input-errors">
-                                    <span id="spanErrorColor"> <%= locals.error? locals.error : null %> </span>
+                                    <span  class="span-err" id="spanErrorColor"> <%= locals.error? locals.error : null %> </span>
                                 </div> 
                             <input  name="price" id="nombre-usuario" placeholder="Precio">
                             <div class="div-input-errors">
-                                <span id="spanErrorPrice"> <%= locals.error? locals.error : null %> </span>
+                                <span  class="span-err" id="spanErrorPrice"> <%= locals.error? locals.error : null %> </span>
                             </div> 
                         </div>
                         <div class="div-input-file">
                             <label for="input-file"> Ingrese una Imagen </label>
                             <input  id="input-file" type="file" name="image" class="file-input" >
+                            <span  class="span-err" id="spanErrorPrice"> <%= locals.error? locals.error : null %> </span>
                         </div>
                         <div class="div-input-errors">
-                            <span id="spanErrorSubmit"></span>
+                            <span  class="span-err" id="spanErrorSubmit"></span>
                         </div> 
                             <button type="submit" class="button-class-create">Crear Producto</button>
                 </form>
             </section>
-
         </main>  
-
         <%- include('../partials/footer.ejs') %>
 </body>
 <script src="/js/productValidation.js"></script>

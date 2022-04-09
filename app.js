@@ -45,5 +45,9 @@ const productRoutes = require("./routes/productRoutes");
 app.use("/product", productRoutes);
 
 
+const apiProductsRoutes = require('./routes/apiProductsRoutes');
+app.use('/api', apiProductsRoutes);
+
+
 
 

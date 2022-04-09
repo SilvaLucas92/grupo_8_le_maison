@@ -393,7 +393,7 @@ body{
     width: 100%;
 }
 
-.div-input-errors span {
+.span-err {
     color: red;
     width: 80%;
     margin: auto;
