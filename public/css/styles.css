@@ -488,6 +488,7 @@ body{
     width: 80%;
     height: 40px;
     margin: auto;
+    margin-top: 10px;
     display: block;
     padding: 5px;
     border-width: 0,5px;
