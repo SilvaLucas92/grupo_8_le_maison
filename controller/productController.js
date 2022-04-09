@@ -24,7 +24,6 @@ const controlador = {
         }
     },
     addCart: async (req, res) => {
-
             let theProduct = await db.Product.findByPk(req.params.id, {
                 include: ['materials', 'colors'],
                 raw: true,

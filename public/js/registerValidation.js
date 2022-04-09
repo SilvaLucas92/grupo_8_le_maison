@@ -78,4 +78,3 @@ window.addEventListener('load', () => {
         }
     })
 })
-    

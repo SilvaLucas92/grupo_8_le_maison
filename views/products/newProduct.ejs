@@ -7,18 +7,18 @@
 
         <main>
             <section class="section-create">
-                <form action="/product" method="POST" class="container-create" enctype="multipart/form-data">
-                        <h4>Formulario de Creación de Productos</h4>
+                <form action="/product" method="POST" class="container-create" id="userForm" enctype="multipart/form-data">
+                        <h4>Formulario de Creacion de Productos</h4>
                         <div class="div-input-create">
-                            <input type="text" name="name" placeholder="Nombre del Producto" value="<%= locals.oldData ? oldData.name: null %> ">
+                            <input type="text" name="name"  placeholder="Nombre del Producto">
                             <div class="div-input-errors">
-                                <span id="errorName"> <%= locals.errors && errors.name? errors.name.msg : null %> </span>
-                            </div>
-                            <input type="text" name="description"  placeholder="Descripcion" value="<%= locals.oldData ? oldData.description : null  %> ">
+                                <span class="span-err"><%= locals.error? locals.error : null %></span>
+                            </div> 
+                            <input type="text" name="description"  placeholder="Descripcion">
                             <div class="div-input-errors">
-                                <span id="errorDescription"> <%= locals.errors && errors.description? errors.description.msg : null %> </span>
-                            </div>
-                                <select name="category" placeholder="Categorias" >
+                                <span  class="span-err" id="spanErrorDescription"> <%= locals.error? locals.error : null %> </span>
+                            </div> 
+                                <select name="category" placeholder="Categorias">
                                     <option value="">Categorias</option>
                                     <% if (locals.categories) { %> 
                                         <% categories.forEach(category => { %> 
@@ -27,9 +27,9 @@
                                     <% } %> 
                                 </select>
                                 <div class="div-input-errors">
-                                    <span id="errorCategory"> <%= locals.errors && errors.category? errors.category.msg : null %> </span>
-                                </div>
-                                <select name="materials" placeholder="materials" >
+                                    <span  class="span-err" id="spanErrorCategory"> <%= locals.error? locals.error : null %> </span>
+                                </div> 
+                                <select name="materials" placeholder="materials">
                                     <option value="">Materiales</option>
                                     <% if (locals.materials) { %>
                                         <% materials.forEach(material => { %> 
@@ -38,9 +38,9 @@
                                     <% } %> 
                                 </select>
                                 <div class="div-input-errors">
-                                    <span id="errorMaterials"> <%= locals.errors && errors.materials? errors.materials.msg : null %> </span>
-                                </div>
-                                <select name="colors" placeholder="colors" >
+                                    <span  class="span-err" id="spanErrorMaterial"> <%= locals.error? locals.error : null %> </span>
+                                </div> 
+                                <select name="colors" placeholder="colors">
                                     <option value="">Colores</option>
                                     <% if (locals.colors) { %>
                                         <% colors.forEach(color => { %> 
@@ -49,26 +49,26 @@
                                     <% } %>
                                 </select>
                                 <div class="div-input-errors">
-                                    <span id="errorColors"> <%= locals.errors && errors.colors? errors.colors.msg : null %> </span>
-                                </div>
-                            <input type="number" name="price" id="nombre-usuario" placeholder="Precio" >
+                                    <span  class="span-err" id="spanErrorColor"> <%= locals.error? locals.error : null %> </span>
+                                </div> 
+                            <input  name="price" id="nombre-usuario" placeholder="Precio">
                             <div class="div-input-errors">
-                                <span id="errorPrice"> <%= locals.errors && errors.price ? errors.price.msg : null %> </span>
-                            </div>
+                                <span  class="span-err" id="spanErrorPrice"> <%= locals.error? locals.error : null %> </span>
+                            </div> 
                         </div>
                         <div class="div-input-file">
                             <label for="input-file"> Ingrese una Imagen </label>
                             <input  id="input-file" type="file" name="image" class="file-input" >
+                            <span  class="span-err" id="spanErrorPrice"> <%= locals.error? locals.error : null %> </span>
                         </div>
                         <div class="div-input-errors">
-                            <span id="errorImage"> <%= locals.errors && errors.image ? errors.image.msg : null %> </span>
-                        </div>
+                            <span  class="span-err" id="spanErrorSubmit"></span>
+                        </div> 
                             <button type="submit" class="button-class-create">Crear Producto</button>
                 </form>
             </section>
-
         </main>  
-
         <%- include('../partials/footer.ejs') %>
 </body>
+<script src="/js/productValidation.js"></script>
 </html>

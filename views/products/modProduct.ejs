@@ -6,35 +6,57 @@
     <main>
         <section class="section-mod">
             
-            <form action="/product/<%= theProduct.id %>?_method=put" method="post" class="container-mod" enctype="multipart/form-data">
+            <form action="/product/<%= theProduct.id %>?_method=put" method="post" id="userForm" class="container-mod" enctype="multipart/form-data">
                     <h4>Estas Modificando el producto <%= theProduct.name %></h4>
                     <div class="div-input-mod">
                         <input type="text" name="name" id="nombre-usuario" placeholder="Nombre del Producto" value=" <%= theProduct.name %>">
+                        <div class="div-input-errors">
+                            <span  class="span-err"> <%= locals.error? locals.error : null %> </span>
+                        </div> 
                         <input type="text" name="description" id="nombre-usuario" placeholder="Descripcion" value=" <%= theProduct.description %> ">
+                        <div class="div-input-errors">
+                            <span class="span-err"> <%= locals.error? locals.error : null %> </span>
+                        </div> 
                         <select name="category" placeholder="Categorias">
                             <option value="">Categorias</option>
                             <% categories.forEach(category => { %> 
                                 <option value="<%= category.id %>" <%= category.id === theProduct.cat_id? "selected" : '' %> > <%= category.name %>   </option>
                                 <%})%>  
                         </select>
+                        <div class="div-input-errors">
+                            <span class="span-err"> <%= locals.error? locals.error : null %> </span>
+                        </div> 
                         <select name="materials" placeholder="materials">
                             <option value="">Materiales</option>
                             <% materials.forEach(material => { %> 
                                 <option value="<%= material.id %>" <%= material.id === theProduct.materials.id? "selected" : '' %> > <%= material.name %>  </option>
                                 <%})%>  
                         </select>
+                        <div class="div-input-errors">
+                            <span class="span-err"> <%= locals.error? locals.error : null %> </span>
+                        </div> 
                     <select name="colors" placeholder="colors">
                         <option value="">Colores</option>
                         <% colors.forEach(color => { %> 
                             <option value="<%= color.id %>" <%= color.id === theProduct.colors.id? "selected" : '' %> > <%= color.name %>  </option>
                             <%})%>  
                     </select>
-                        <input type="text" name="price" id="nombre-usuario" placeholder="Precio" value=" <%= theProduct.price %>">
+                    <div class="div-input-errors">
+                        <span class="span-err"> <%= locals.error? locals.error : null %> </span>
+                    </div> 
+                        <input name="price"  placeholder="Precio" value=" <%= theProduct.price %>">
+                        <div class="div-input-errors">
+                            <span class="span-err"> <%= locals.error? locals.error : null %> </span>
+                        </div> 
                     </div>
                     <div class="div-input-file">
                         <label for="input-file"> Ingrese una Imagen </label>
                         <input  id="input-file" type="file" name="image" class="file-input" >
+                        <span class="span-err"></span>
                     </div>
+                    <div class="div-input-errors">
+                        <span  class="span-err" id="spanErrorSubmit"></span>
+                    </div> 
                         <button type="submit" class="button-class-mod">Modificar Producto</button>
 
 
@@ -45,4 +67,5 @@
     </main>
         <%- include('../partials/footer.ejs') %>
 </body>
+<script src="/js/productValidation.js"></script>
 </html>
