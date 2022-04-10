@@ -18,14 +18,14 @@
                             <div class="div-input-errors">
                                 <span  class="span-err" id="spanErrorDescription"> <%= locals.error? locals.error : null %> </span>
                             </div> 
-                                <select name="category" placeholder="Categorias">
+                                <select id="categoryInput" name="category" placeholder="Categorias">
                                     <option value="">Categorias</option>
                                     <% categories.forEach(category => { %> 
                                         <option value="<%= category.id %>"> <%= category.name %>  </option>
                                         <%})%>  
                                 </select>
                                 <div class="div-input-errors">
-                                    <span  class="span-err" id="spanErrorCategory"> <%= locals.error? locals.error : null %> </span>
+                                    <span  class="span-err"></span>
                                 </div> 
                                 <select name="materials" placeholder="materials">
                                     <option value="">Materiales</option>

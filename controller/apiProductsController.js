@@ -2,16 +2,25 @@ const db = require ('../database/models');
 const { Op } = require("sequelize");
 
 const controller = {    
-    index: (req, res) => {
-        db.Product
-            .findAll({include: ['category','materials', 'colors']})
-            .then(movies => {
-                return res.status(200).json({
-                    count: movies.length,
-                    data: movies,
-                    status: 200
-                })
-            })
+    index: async (req, res) => {
+        const allPdts = await db.Product.findAll({include: ['category','materials', 'colors']});
+        const countCatMesas = await db.Product.count({ where: { cat_id: 1}});
+        const countCatEscritorios = await db.Product.count({ where: { cat_id: 2}});
+        const countCatSillas = await db.Product.count({ where: { cat_id: 3}});
+        const countCatSillones = await db.Product.count({ where: { cat_id: 4}});
+        const countCatEstanterias = await db.Product.count({ where: { cat_id: 5}});
+        res.status(200).json({
+            count: allPdts.length,
+            countByCat: {
+                mesas: countCatMesas,
+                escritorios: countCatEscritorios,
+                sillas: countCatSillas,
+                sillones: countCatSillones,
+                estanterias:countCatEstanterias
+            },
+            data: allPdts,
+            status: 200
+        })
     },
     detail: (req, res) => {
         let id = req.params.id
@@ -21,12 +30,19 @@ const controller = {
                 raw: true,
                 nest: true
                 })
-        .then(movie => {
+        .then(product => {
             return res.status(200).json({
-                data: movie,
+                data: product,
                 status: 200
             })
         })
     }
 }
 module.exports = controller;
+
+
+// 2: escritorios
+// 5: estanterias
+// 1: mesas
+// 4: sillones
+//3: sillas
