@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
     const spanErrorSubmit = document.getElementById('spanErrorSubmit');
     const inputFile = document.getElementById('input-file');
     const categoryInput = document.getElementById('categoryInput');
-    console.log('hola' + categoryInput.value)
+
     const validForm = {
         nameInput: false,
         descriptionInput: false,
