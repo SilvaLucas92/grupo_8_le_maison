@@ -50,6 +50,9 @@ window.addEventListener('load', () => {
     userForm.addEventListener('submit', (e) => {
         e.preventDefault()
         console.log ('el formulario no se envia');
+        if(!emailInput.value.trim() == '' && !passwordInput.value.trim() == '') {
+            userForm.submit()
+        }
     })
     iconPassword.addEventListener('click', () => {
         if (passwordInput.type == "password") { 

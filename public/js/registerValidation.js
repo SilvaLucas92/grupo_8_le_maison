@@ -70,8 +70,9 @@ window.addEventListener('load', () => {
     userForm.addEventListener('submit', (e) => {
         e.preventDefault()
         console.log ('el formulario no se envia');
-        if(!nameInput.value.trim() && emailInput.value.trim() && passwordInput.value.trim()) {
+        if(!nameInput.value.trim() == '' && !emailInput.value.trim() == '' && !passwordInput.value.trim() == '') {
             userForm.submit()
+        }
         }
     })
 
