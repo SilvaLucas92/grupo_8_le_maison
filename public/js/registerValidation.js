@@ -4,6 +4,20 @@ window.addEventListener('load', () => {
     const emailInput = document.querySelector('[name=email]')
     const passwordInput = document.querySelector('[name=password]');
     const iconPassword = document.querySelector('#iconPassword');
+
+    iconPassword.addEventListener('click', () => {
+        if (passwordInput.type == "password") { 
+            iconPassword.classList.remove("fa-eye-slash");
+            iconPassword.classList.add("fa-solid");
+            iconPassword.classList.add("fa-eye");
+            passwordInput.type = "text"
+        } else {
+            iconPassword.classList.remove("fa-solid");
+            iconPassword.classList.remove("fa-eye");
+            iconPassword.classList.add('fa-eye-slash');
+            passwordInput.type = "password"
+        }
+    })
     
     function validateName (e) {
         const field = e.target;
@@ -60,12 +74,11 @@ window.addEventListener('load', () => {
         if(password.trim() === '') {
             divError.innerText = `El campo ${field.name} es obligatorio`;
         }
-
     }
 
     nameInput.addEventListener ('blur', validateName) ;
     emailInput.addEventListener ('blur', validateEmail);
-    passwordInput.addEventListener ('blur', validatePass);
+    passwordInput.addEventListener ('input', validatePass)
 
     userForm.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -73,22 +86,5 @@ window.addEventListener('load', () => {
         if(!nameInput.value.trim() == '' && !emailInput.value.trim() == '' && !passwordInput.value.trim() == '') {
             userForm.submit()
         }
-        }
+        })
     })
-
-    //Evento del icono pas
-    iconPassword.addEventListener('click', () => {
-        if (passwordInput.type == "password") { 
-            iconPassword.classList.remove("fa-eye-slash");
-            iconPassword.classList.add("fa-solid");
-            iconPassword.classList.add("fa-eye");
-            passwordInput.type = "text"
-        } else {
-            iconPassword.classList.remove("fa-solid");
-            iconPassword.classList.remove("fa-eye");
-            iconPassword.classList.add('fa-eye-slash');
-            passwordInput.type = "password"
-        }
-    })
-})
-    
