@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
     function validateName (e) {
         const field = e.target;
         const spanError = field.nextElementSibling;
-        console.log (spanError)
+        console.log (spanError) 
         const name = nameInput.value;
         const er =  /^[A-z0-9_-]{2,10}$/;
         if (!er.test(name)){
@@ -69,7 +69,10 @@ window.addEventListener('load', () => {
 
     userForm.addEventListener('submit', (e) => {
         e.preventDefault()
-        console.log ('el formulario no se envia')
+        console.log ('el formulario no se envia');
+        if(!nameInput.value.trim() && emailInput.value.trim() && passwordInput.value.trim()) {
+            userForm.submit()
+        }
     })
 
     //Evento del icono pas

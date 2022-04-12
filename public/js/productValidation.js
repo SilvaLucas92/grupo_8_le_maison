@@ -85,6 +85,7 @@ window.addEventListener('load', () => {
             inputFile.nextElementSibling.innerText = 'Extensión no permitida. Utiliza: .jpeg/.jpg/.png/.gif.'
         } else {
             inputFile.nextElementSibling.innerText = ""
+            validForm.inputFile = true;
         }
     })
 
