@@ -380,14 +380,9 @@ body{
     margin: auto;
 }
 
-
-
 .inicie-class {
     font-size: 20px;
 }
-
-
-
 
 .div-input-errors {
     width: 100%;
@@ -418,6 +413,7 @@ body{
     padding-right: 20px;
     position: relative;
     bottom: 30px;
+    cursor: pointer;
 }
 
 .div-checkbox {
