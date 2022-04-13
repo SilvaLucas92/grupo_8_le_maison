@@ -31,7 +31,17 @@ const controller = {
                 message: 'User not delete'
             })
         }
-    }
+    },
+    store: async (req, res) => {
+        const user = await User
+            .create(req.body)
+            .then(user => {
+            return res.status(200).json({
+                data: user,
+                message: 'Successfully created'
+            })
+        })
+    },
 };
 
 module.exports = controller;
