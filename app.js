@@ -44,10 +44,12 @@ app.use("/user", userRoutes);
 const productRoutes = require("./routes/productRoutes");
 app.use("/product", productRoutes);
 
-
+//api routes
 const apiProductsRoutes = require('./routes/apiProductsRoutes');
 app.use('/api', apiProductsRoutes);
 
+const apiUsersRoutes = require('./routes/apiUsersRoutes');
+app.use('/api', apiUsersRoutes)
 
 
 
