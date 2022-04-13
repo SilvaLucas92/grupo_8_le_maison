@@ -70,6 +70,7 @@ window.addEventListener('load', () => {
     userForm.addEventListener('submit', (e) => {
         e.preventDefault()
         console.log ('el formulario no se envia')
+        
     })
 
     //Evento del icono pas
