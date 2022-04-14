@@ -26,7 +26,8 @@ const controlador = {
         }
         const userToStore = await User.create({
             ...req.body,
-            password: bcrypt.hashSync(req.body.password, 10)
+            password: bcrypt.hashSync(req.body.password, 10),
+            image: req.file? req.file.filename : ''
         });
         return res.redirect('/user/login');
     },
@@ -50,7 +51,7 @@ const controlador = {
             return res.render('../views/users/login.ejs', {error});
     },
     profile: (req, res) => {
-        return res.render("../views/users/userProfile.ejs", {user:req.session.userLogged});
+        return res.render("../views/users/profile.ejs", {user:req.session.userLogged});
     },
     logout: (req, res) => {
         res.clearCookie('userEmail');
