@@ -82,28 +82,9 @@ window.addEventListener('load', () => {
 
     userForm.addEventListener('submit', (e) => {
         e.preventDefault()
-<<<<<<< HEAD
-        console.log ('el formulario no se envia')
-        
-    })
-
-    //Evento del icono pas
-    iconPassword.addEventListener('click', () => {
-        if (passwordInput.type == "password") { 
-            iconPassword.classList.remove("fa-eye-slash");
-            iconPassword.classList.add("fa-solid");
-            iconPassword.classList.add("fa-eye");
-            passwordInput.type = "text"
-        } else {
-            iconPassword.classList.remove("fa-solid");
-            iconPassword.classList.remove("fa-eye");
-            iconPassword.classList.add('fa-eye-slash');
-            passwordInput.type = "password"
-=======
         console.log ('el formulario no se envia');
         if(!nameInput.value.trim() == '' && !emailInput.value.trim() == '' && !passwordInput.value.trim() == '') {
             userForm.submit()
->>>>>>> 157f502ce3ee5252b50d8eb8222ef50eca570ea5
         }
         })
     })
