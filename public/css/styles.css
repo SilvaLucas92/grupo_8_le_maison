@@ -15,21 +15,58 @@ body{
 
 .icon-bar {
     display: block;
-    background-color: #424242;
     color: #ffffff;
     max-width: 80px;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 100px;
     margin: auto;
     text-align: center;
-
+    background-color: #3d443a;
 }
 
-.icon-bar:hover {
-    background-color: #ffffff;
-    color: #424242;
+.active {
+    transform: translate(-600px);
 }
 
+/*.opacity {
+    background-color: rgba(0,0,0,0.5);
+    transition: all .5s ease;
+}*/
+
+.icon-bar img {
+    vertical-align: top;
+    width: 40px;
+    cursor: pointer;
+}
+
+.cont-menu {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 2px 0px 5px 2px rgb(66,66,66);
+    width: 400px;
+    height: 100vh;
+    padding: 100px 0px 20px 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s ease;
+}
+
+
+.cont-menu li a {
+    color: white;
+    display: block;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: left;
+    padding: 10px 50px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.cont-menu li a:hover {
+    background-color: rgb(228,228,228);
+    color: rgb(42,42,42);
+}
 
 .div-logo {
     display: flex;

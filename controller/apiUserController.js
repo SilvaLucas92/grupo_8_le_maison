@@ -7,7 +7,7 @@ const controller = {
         delete allUsers.password;
         return res.status(200).json({
             count: allUsers.length,
-            data: allUsers
+            users: allUsers
         })
     },
     detail: async (req, res) => {
@@ -15,7 +15,7 @@ const controller = {
         const oneUser = await User.findByPk(id)
         delete oneUser.password;
         return res.status(200).json({
-            data: oneUser
+            user: oneUser
         })
     },
     delete: async (req, res) => {
@@ -37,7 +37,7 @@ const controller = {
             .create(req.body)
             .then(user => {
             return res.status(200).json({
-                data: user,
+                user: user,
                 message: 'Successfully created'
             })
         })
