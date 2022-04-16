@@ -9,8 +9,11 @@ const controller = {
         const countCatSillas = await db.Product.count({ where: { cat_id: 3}});
         const countCatSillones = await db.Product.count({ where: { cat_id: 4}});
         const countCatEstanterias = await db.Product.count({ where: { cat_id: 5}});
+        const countAllCategories = await db.Category.count();
         res.status(200).json({
             count: allPdts.length,
+            lastPdtInDB: allPdts.length - 1,
+            countAllCat: countAllCategories,
             countByCat: {
                 mesas: countCatMesas,
                 escritorios: countCatEscritorios,
@@ -30,7 +33,7 @@ const controller = {
                 raw: true,
                 nest: true
                 })
-        .then(movie => {
+            .then(movie => {
             return res.status(200).json({
                 data: movie,
                 status: 200
