@@ -3,7 +3,7 @@ const { Op } = require("sequelize");
 
 const controller = {    
     index: async (req, res) => {
-        const allPdts = await db.Product.findAll({include: ['category','materials', 'colors']});
+        const allPdts = await db.Product.findAll( {include: ['category','materials', 'colors']});
         const countCatMesas = await db.Product.count({ where: { cat_id: 1}});
         const countCatEscritorios = await db.Product.count({ where: { cat_id: 2}});
         const countCatSillas = await db.Product.count({ where: { cat_id: 3}});
@@ -12,7 +12,7 @@ const controller = {
         const countAllCategories = await db.Category.count();
         res.status(200).json({
             count: allPdts.length,
-            lastPdtInDB: allPdts.length - 1,
+            lastPdtInDB: allPdts[allPdts.length - 1],
             countAllCat: countAllCategories,
             countByCat: {
                 mesas: countCatMesas,
@@ -33,9 +33,9 @@ const controller = {
                 raw: true,
                 nest: true
                 })
-            .then(movie => {
+            .then(product => {
             return res.status(200).json({
-                data: movie,
+                data: product,
                 status: 200
             })
         })
