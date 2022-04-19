@@ -12,7 +12,10 @@ const controller = {
         const countAllCategories = await db.Category.count();
         res.status(200).json({
             count: allPdts.length,
-            lastPdtInDB: allPdts[allPdts.length - 1],
+            lastPdtInDB: {
+                lastPdtInDB: allPdts[allPdts.length - 1],
+                image: allPdts[allPdts.length - 1].image? '/images/' + allPdts[allPdts.length - 1].image : null
+            },
             countAllCat: countAllCategories,
             countByCat: {
                 mesas: countCatMesas,
