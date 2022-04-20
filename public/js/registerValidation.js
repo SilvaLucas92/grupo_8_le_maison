@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
     const emailInput = document.querySelector('[name=email]')
     const passwordInput = document.querySelector('[name=password]');
     const iconPassword = document.querySelector('#iconPassword');
-
+    const inputFile = document.getElementById('input-file');
     iconPassword.addEventListener('click', () => {
         if (passwordInput.type == "password") { 
             iconPassword.classList.remove("fa-eye-slash");
@@ -64,6 +64,7 @@ window.addEventListener('load', () => {
         if(!er.test(password)) {
             divError.innerText = 'Ingresa una contraseña de 8 a 15 caracteres';
             divError.style.color = 'red'
+            divError.style.padding = '5px 0px 5px 0px';
             divError.style.textAlign = 'left'
             field.classList.add("invalidInput")
         }else{
@@ -75,6 +76,17 @@ window.addEventListener('load', () => {
             divError.innerText = `El campo ${field.name} es obligatorio`;
         }
     }
+
+    inputFile.addEventListener('change', () => {
+        const inputValue = inputFile.value;
+        const allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+        if (!allowedExtensions.exec(inputValue)) {
+            inputFile.nextElementSibling.classList.add ('span-err');
+            inputFile.nextElementSibling.innerText = 'Extensión no permitida. Utiliza: .jpeg/.jpg/.png/.gif.'
+        } else {
+            inputFile.nextElementSibling.innerText = ""
+        }
+    })
 
     nameInput.addEventListener ('blur', validateName) ;
     emailInput.addEventListener ('blur', validateEmail);

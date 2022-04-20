@@ -16,8 +16,6 @@ window.addEventListener('load', () => {
         if (nameInput.value.trim() == '') {
             nameInput.classList.add('invalidInput');
             nameInput.nextElementSibling.classList.add ('span-err');
-            nameInput.nextElementSibling.style.display = 'block';
-            nameInput.nextElementSibling.style.padding = '5px 5px 5px 67px';
             nameInput.nextElementSibling.innerText = "Ingrese el Nombre de producto"
         }
         else if (nameInput.value.length < 5) {
@@ -38,8 +36,7 @@ window.addEventListener('load', () => {
             descriptionInput.classList.add('invalidInput');
             descriptionInput.nextElementSibling.classList.add ('span-err');
             descriptionInput.nextElementSibling.style.display = 'block';
-            descriptionInput.nextElementSibling.style.padding = '5px 5px 5px 67px';
-            descriptionInput.nextElementSibling.innerText = "Ingrese el Nombre de producto"
+            descriptionInput.nextElementSibling.innerText = "Ingrese una Descripcion del producto"
         } else if (descriptionInput.value.length < 20) {
             descriptionInput.classList.add('invalidInput');
             descriptionInput.nextElementSibling.innerText = "La descripcion del Producto debe tener al menos 20 caracteres"

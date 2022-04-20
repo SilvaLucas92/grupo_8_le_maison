@@ -18,10 +18,10 @@ body{
     color: #ffffff;
     max-width: 80px;
     padding: 5px;
-    border-radius: 100px;
+    /* border-radius: 100px; */
     margin: auto;
     text-align: center;
-    background-color: #3d443a;
+    /* background-color: #3d443a; */
 }
 
 .active {
@@ -52,7 +52,7 @@ body{
 }
 
 
-.cont-menu li a {
+.cont-menu  li a {
     color: white;
     display: block;
     font-size: 25px;
@@ -66,6 +66,22 @@ body{
 .cont-menu li a:hover {
     background-color: rgb(228,228,228);
     color: rgb(42,42,42);
+}
+
+.logout-nav {
+    background-color: #000000;
+    margin-left: 0px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+.logout-nav button {
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 25px;
+    text-align: left;
+    margin: auto;
+    cursor: pointer;
 }
 
 .div-logo {
@@ -419,18 +435,15 @@ body{
 }
 
 .div-input-errors {
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 
 .span-err {
     color: red;
-    width: 100%;
+    width: 80%;
     margin: auto;
     padding: 5px 5px 5px 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
 }
 
 .iconPassword {
@@ -524,7 +537,7 @@ body{
     margin-top: 10px;
     display: block;
     padding: 5px;
-    border-width: 0,5px;
+    border-width: 0px;
 }
 
 .div-checkbox-register {
@@ -594,6 +607,7 @@ body{
 
 .div-input-file { 
     margin-bottom: 10px;
+    margin: auto;
     width: 80%;
     text-align: left;
 }
@@ -611,6 +625,7 @@ body{
     padding: 5px;
     background-color: #ffffff;
     border-width: 0px;
+    font-size: 12px;
     color: #5a4d4d;
     margin-top: 20px;
     cursor: pointer;
@@ -685,6 +700,7 @@ body{
     flex-direction: column;
     text-align: left;
     margin: auto;
+    padding: 15px;
 }
 
 .div-image img {
@@ -694,7 +710,6 @@ body{
 .div-img-text p{
     text-align: left;
     color: #3d443a;
-    padding: 5px;
 }
 
 .div-img-text h2 {
@@ -1089,6 +1104,10 @@ body{
     
         .container-register {
             max-width: 650px;
+        }
+
+        .div-input-file label { 
+            font-size: 15px;
         }
 
         /**** Cart ***/

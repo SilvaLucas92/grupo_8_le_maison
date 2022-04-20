@@ -12,6 +12,9 @@ window.addEventListener('load', () => {
         const er = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,20})$/
         if (!er.test(email)){
             spanError.innerText = 'Ingresa un email valido';
+            spanError.style.color = 'red';
+            spanError.style.padding = '5px 0px 5px 0px';
+            spanError.style.textAlign = 'left';
             field.classList.add("invalidInput")
         }else{
             spanError.innerText = '';
@@ -31,6 +34,7 @@ window.addEventListener('load', () => {
         if(!er.test(password)) {
             divError.innerText = 'Ingresa una contraseña de 8 a 15 caracteres';
             divError.style.color = 'red'
+            divError.style.padding = '5px 0px 5px 0px';
             divError.style.textAlign = 'left'
             field.classList.add("invalidInput")
         }else{

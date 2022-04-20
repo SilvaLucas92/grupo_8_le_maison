@@ -8,12 +8,12 @@
             <form action="/user/register" method="POST" class="container-create" enctype="multipart/form-data" id="userForm">
                     <h4>Registrate</h4>
                     <div class="div-input-register">
+                        <input type="text" name="name" placeholder="Nombre y Apellido" value= "<%= locals.valores? valores.name : null %>">
                         <div class="span-err">
-                            <input type="text" name="name" placeholder="Nombre y Apellido" value= "<%= locals.valores? valores.name : null %>">
                             <span id="spanErrorName"> <%= locals.validaciones && validaciones.name? validaciones.name.msg : null %> </span>
                         </div>
+                        <input type="email" name="email" placeholder="E-mail" value= "<%= locals.valores? valores.email : null %>">
                         <div class="span-err">
-                            <input type="email" name="email" placeholder="E-mail" value= "<%= locals.valores? valores.email : null %>">
                             <span id="spanErrorEmail"> <%= locals.validaciones && validaciones.email? validaciones.email.msg : null %> </span>
                         </div>
                         <div class="div-input-file">

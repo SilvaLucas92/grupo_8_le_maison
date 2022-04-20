@@ -14,7 +14,7 @@ const controller = {
             count: allPdts.length,
             lastPdtInDB: {
                 lastPdtInDB: allPdts[allPdts.length - 1],
-                image: allPdts[allPdts.length - 1].image? '/images/' + allPdts[allPdts.length - 1].image : null
+                image: allPdts[allPdts.length - 1].image? '/images/' + allPdts[allPdts.length - 1].image : ''
             },
             countAllCat: countAllCategories,
             countByCat: {

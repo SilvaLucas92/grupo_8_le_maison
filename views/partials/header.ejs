@@ -9,7 +9,15 @@
             <li><a href="/">Home</a></li>
             <li><a href="/product">Productos</a></li>
             <li><a href="/product/new">Nuevo Producto</a></li>
-            <li><a href="/user/login">Iniciar Sesión</a></li>
+            <% if(locals.logged) { %>
+                <li><a href="/user/profile">Ir al perfil</a></li>
+                <form class="logout-nav" action="/user/logout" method="post" >
+                    <li><button >Logout</button></li>
+                </form>
+            <% } else {  %>
+                <li><a href="/user/login">Iniciar Sesión</a></li>
+            <% } %>
+
         </div>
         <img src="/images/LeMaison.png" alt="logo">
         <ul>
@@ -19,10 +27,10 @@
                     <li><button type="submit" class="button-log">Logout</button></li>
                 </form>
                 <li> <p> Hi! <%= locals.data.name %> </p> </li>
-                <li><a href="/user/login"><i class="far fa-user"></i></a></li>
+                <!-- <li><a href="/user/login"><i class="far fa-user"></i></a></li> -->
                 <li><a href="/user/profile">Ir al perfil</a></li>
                 <% } else {  %>
-            <li><a href="/user/login"><i class="far fa-user"></i></a></li>
+                <li><a href="/user/login"><i class="far fa-user"></i></a></li>
             <% } %>
         </ul>
     </div>
