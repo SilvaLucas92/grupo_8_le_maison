@@ -4,7 +4,7 @@ const controller = require("../controller/userController.js")
 const upload = require('../middlewares/multerMD');
 const userValidator = require('../middlewares/expressMD');
 const guestMD = require('../middlewares/guestMD');
-const logged = require('../middlewares/logged')
+const logged = require('../middlewares/logged');
 //login
 router.get("/login", guestMD, controller.login);
 router.post('/login', controller.loginProcess);

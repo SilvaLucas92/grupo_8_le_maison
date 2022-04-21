@@ -21,10 +21,10 @@
                         <option value="">3</option>
                     </select> -->
                     <div class="button-detail">
+                        <% if(locals.logged) { %>
                         <a href="/product/cart/<%= theProduct.id %>">
                             <button>Agregar</button>
-                        </a>
-                        <% if(locals.logged) { %>
+                        </a>    
                         <a href="/product/edit/<%= theProduct.id %>">
                             <button type="submit" class="button-class-mod">Modificar</button>
                         </a> 
