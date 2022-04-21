@@ -4,7 +4,6 @@ const controller = require("../controller/productController");
 const fileUpload = require('../middlewares/multerMD');
 const productValidator = require('../middlewares/productValidator')
 const logged = require('../middlewares/logged');
-
 //productList
 router.get("/", controller.browse);
 //Search
