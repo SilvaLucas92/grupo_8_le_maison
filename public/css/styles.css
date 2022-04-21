@@ -118,13 +118,13 @@ body{
     padding: 5px;
     margin: auto;
     color: #424242;
-    transition: all .2s ease-in-out; 
+    /* transition: all .2s ease-in-out;  */
 }
 
-.div-logo ul li:hover,
+/* .div-logo ul li:hover,
 .div-logo-carrito li:hover {
     transform: scale(1.5); 
-}
+} */
 
 .div-logo a,
 .div-logo-carrito a {

@@ -3,21 +3,15 @@ window.addEventListener('load', () => {
     const nameInput = document.querySelector('[name=name]');
     const emailInput = document.querySelector('[name=email]')
     const passwordInput = document.querySelector('[name=password]');
-    const iconPassword = document.querySelector('#iconPassword');
     const inputFile = document.getElementById('input-file');
-    iconPassword.addEventListener('click', () => {
-        if (passwordInput.type == "password") { 
-            iconPassword.classList.remove("fa-eye-slash");
-            iconPassword.classList.add("fa-solid");
-            iconPassword.classList.add("fa-eye");
-            passwordInput.type = "text"
-        } else {
-            iconPassword.classList.remove("fa-solid");
-            iconPassword.classList.remove("fa-eye");
-            iconPassword.classList.add('fa-eye-slash');
-            passwordInput.type = "password"
-        }
-    })
+    const spanErrorSubmit = document.getElementById('spanErrorSubmit');
+
+    const validForm = {
+        nameInput: false,
+        emailInput: false,
+        passInput: false,
+        inputFile: false
+    }
     
     function validateName (e) {
         const field = e.target;
@@ -32,6 +26,7 @@ window.addEventListener('load', () => {
             spanError.innerText = ''
             field.classList.remove("invalidInput");
             field.classList.add("validInput");
+            validForm.nameInput = true;
         }
         if (name.trim()=== ''){
             spanError.innerText = `El campo ${field.name} es obligatorio`;
@@ -50,6 +45,7 @@ window.addEventListener('load', () => {
             spanError.innerText = '';
             field.classList.remove("invalidInput");
             field.classList.add("validInput");
+            validForm.emailInput = true;
         }
         if (email.trim() === '') {
             spanError.innerText = `El campo ${field.name} es obligatorio`;
@@ -71,6 +67,7 @@ window.addEventListener('load', () => {
             divError.innerText = '';
             field.classList.remove("invalidInput");
             field.classList.add("validInput");
+            validForm.passInput = true;
         }
         if(password.trim() === '') {
             divError.innerText = `El campo ${field.name} es obligatorio`;
@@ -84,7 +81,8 @@ window.addEventListener('load', () => {
             inputFile.nextElementSibling.classList.add ('span-err');
             inputFile.nextElementSibling.innerText = 'Extensión no permitida. Utiliza: .jpeg/.jpg/.png/.gif.'
         } else {
-            inputFile.nextElementSibling.innerText = ""
+            inputFile.nextElementSibling.innerText = "";
+            validForm.inputFile = true;
         }
     })
 
@@ -92,11 +90,25 @@ window.addEventListener('load', () => {
     emailInput.addEventListener ('blur', validateEmail);
     passwordInput.addEventListener ('input', validatePass)
 
-    userForm.addEventListener('submit', (e) => {
-        e.preventDefault()
-        console.log ('el formulario no se envia');
-        if(!nameInput.value.trim() == '' && !emailInput.value.trim() == '' && !passwordInput.value.trim() == '') {
+    const validationInput = () => {
+        const objectToArray = Object.values(validForm)
+        const validationObject = objectToArray.findIndex(item => item == false);
+        if (validationObject == -1) {
             userForm.submit()
+        } else {
+            spanErrorSubmit.innerText = 'Complete el formulario correctamente'
         }
-        })
+    }
+
+    // userForm.addEventListener('submit', (e) => {
+    //     e.preventDefault()
+    //     console.log ('el formulario no se envia');
+    //     if(!nameInput.value.trim() == '' && !emailInput.value.trim() == '' && !passwordInput.value.trim() == '') {
+    //         userForm.submit()
+    //     }
+    //     })
+    userForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        validationInput();
+    })
     })
